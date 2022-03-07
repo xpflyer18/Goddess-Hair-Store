@@ -6,11 +6,24 @@
     "lite": "lite-server",
     "start": "npm run lite",
     "test": "echo \"error: no test specified\" && exit 1"
-   },
+  },
   "author": "",
   "license": "ISC",
   "description": "Goddess Hair Store",
   "dependencies": {
-    "bootstrap": "^4.5.2"
-  }
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpflyer18/Goddess-Hair-Store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpflyer18/Goddess-Hair-Store/issues"
+  },
+  "homepage": "https://github.com/xpflyer18/Goddess-Hair-Store#readme"
 }
