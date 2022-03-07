@@ -1,0 +1,16 @@
+{
+  "name": "godddesshair",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "npm run lite",
+    "test": "echo \"error: no test specified\" && exit 1"
+   },
+  "author": "",
+  "license": "ISC",
+  "description": "Goddess Hair Store",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}
