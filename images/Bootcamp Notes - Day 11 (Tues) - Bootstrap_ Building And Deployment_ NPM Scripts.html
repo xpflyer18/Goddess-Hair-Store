@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://cs360studio.com/2021/02/bootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts/ -->
+<html lang="en-US" prefix="og: https://ogp.me/ns#" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="icon" type="image/png" href="https://cs360studio.com/wp-content/uploads/2020/12/360studio_main_logo_57x57trans.png">
+<style>
+#wpadminbar #wp-admin-bar-wsm_free_top_button .ab-icon:before {
+	content: "\f239";
+	color: #FF9800;
+	top: 3px;
+}
+</style>
+<!-- Search Engine Optimization by Rank Math - https://s.rankmath.com/home -->
+<title>Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building And Deployment: NPM Scripts</title>
+<meta name="description" content="Building and Deployment: NPM Scripts In this section you will learn about getting your files ready for deployment to a web Will also learn how to use NPM scripts to automate the whole First let&#39;s talk about the…">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://cs360studio.com/2021/02/bootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building And Deployment: NPM Scripts">
+<meta property="og:description" content="Building and Deployment: NPM Scripts In this section you will learn about getting your files ready for deployment to a web Will also learn how to use NPM scripts to automate the whole First let&#39;s talk about the…">
+<meta property="og:url" content="https://cs360studio.com/2021/02/bootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts/">
+<meta property="og:site_name" content="CS360STUDIO.COM">
+<meta property="article:tag" content="NPM Scripts">
+<meta property="article:section" content="Web Development">
+<meta property="og:updated_time" content="2021-02-10T16:51:54+00:00">
+<meta property="og:image" content="https://cs360studio.com/wp-content/uploads/2021/02/20190815_134536.jpg">
+<meta property="og:image:secure_url" content="https://cs360studio.com/wp-content/uploads/2021/02/20190815_134536.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="450">
+<meta property="og:image:alt" content="Bootcamp Notes – Day 11 (Tues) – Bootstrap: Building and Deployment: NPM Scripts">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building And Deployment: NPM Scripts">
+<meta name="twitter:description" content="Building and Deployment: NPM Scripts In this section you will learn about getting your files ready for deployment to a web Will also learn how to use NPM scripts to automate the whole First let&#39;s talk about the…">
+<meta name="twitter:image" content="https://cs360studio.com/wp-content/uploads/2021/02/20190815_134536.jpg">
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="CS">
+<meta name="twitter:label2" content="Time to read">
+<meta name="twitter:data2" content="9 minutes">
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="CS360STUDIO.COM » Feed" href="https://cs360studio.com/feed/">
+<script type="text/javascript" async="" defer="" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/wsm_new.js.download"></script><script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/cs360studio.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code>code{font-family:Menlo,Consolas,monaco,monospace;color:#1e1e1e;padding:.8em 1em;border:1px solid #ddd;border-radius:4px}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-group:where(.has-background){padding:1.25em 2.375em}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto;opacity:.4}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="cookie-law-info-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/cookie-law-info-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="cookie-law-info-gdpr-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/cookie-law-info-gdpr.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp_automatic_gallery_style-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/wp-automatic.css" type="text/css" media="all">
+<link rel="stylesheet" id="wsm-style-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="demo_fonts-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/css" type="text/css" media="screen">
+<link rel="stylesheet" id="standard_pro-style-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-style-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-style-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="flagallery-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/flagallery.css" type="text/css" media="all">
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/jquery.min.js.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="cookie-law-info-js-extra">
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#FFF","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#3566bb","button_3_button_hover":"#2a5296","button_3_link_colour":"#fff","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#000","button_4_button_hover":"#000000","button_4_link_colour":"#333333","button_4_as_button":"","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#fff","button_7_as_button":"1","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#333333","show_once_yn":"1","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https:\/\/cs360studio.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/cookie-law-info-public.js.download" id="cookie-law-info-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/main-front.js.download" id="wp_automatic_gallery-js"></script>
+<link rel="https://api.w.org/" href="https://cs360studio.com/wp-json/"><link rel="alternate" type="application/json" href="https://cs360studio.com/wp-json/wp/v2/posts/1239"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cs360studio.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://cs360studio.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.9.1">
+<link rel="shortlink" href="https://cs360studio.com/?p=1239">
+<link rel="alternate" type="application/json+oembed" href="https://cs360studio.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://cs360studio.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F&amp;format=xml">
+<meta name="google-site-verification" content="Nlt_tpQH_fkiBF0lNzNnGj8zLbHwG9m7QDezIvYSTDw">	   
+    <!-- Wordpress Stats Manager -->
+    <script type="text/javascript">
+          var _wsm = _wsm || [];
+           _wsm.push(['trackPageView']);
+           _wsm.push(['enableLinkTracking']);
+           _wsm.push(['enableHeartBeatTimer']);
+          (function() {
+            var u="https://cs360studio.com/wp-content/plugins/wp-stats-manager/";
+            _wsm.push(['setUrlReferrer', "https://www.google.com/"]);
+            _wsm.push(['setTrackerUrl',"https://cs360studio.com/?wmcAction=wmcTrack"]);
+            _wsm.push(['setSiteId', "1"]);
+            _wsm.push(['setPageId', "1239"]);
+            _wsm.push(['setWpUserId', "0"]);           
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/wsm_new.js'; s.parentNode.insertBefore(g,s);
+          })();
+    </script>
+    <!-- End Wordpress Stats Manager Code -->
+      
+<!-- <meta name='Grand Flagallery' content='6.0.2' /> -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://cs360studio.com/wp-content/uploads/2020/12/blueblock_100px.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	
+<!-- Begin Custom CSS -->
+<style type="text/css" id="demo-custom-css">
+.primary{color:#1e73be;}
+</style>
+<!-- End Custom CSS -->
+		<style type="text/css" id="wp-custom-css">
+			.content-grid .entry-summary {
+display: inline;
+}		</style>
+		<style type="text/css" media="all">
+	body,
+	input,
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="password"],
+	textarea,
+	table,
+	.sidebar .widget_ad .widget-title,
+	.site-footer .widget_ad .widget-title {
+		font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	#secondary-menu li a,
+	.footer-nav li a,
+	.pagination .page-numbers,
+	button,
+	.btn,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.comment-form label,
+	label,
+	h1,h2,h3,h4,h5,h6 {
+		font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	a:hover,
+	.site-header .search-icon:hover span,
+	#primary-menu li a:link,
+	#primary-menu li a:visited,
+	#primary-menu li.sfHover li a,
+	#secondary-menu li.sfHover li a,	
+	.sf-menu li li a:hover,
+	.sf-menu li.sfHover a,
+	.sf-menu li.current-menu-item a,
+	.sf-menu li.current-menu-item a:hover,
+	.breadcrumbs .breadcrumbs-nav a:hover,
+	.read-more a,
+	.read-more a:visited,
+	.entry-title a:hover,
+	article.hentry .edit-link a,
+	.author-box a,
+	.page-content a,
+	.entry-content a,
+	.comment-author a,
+	.comment-content a,
+	.comment-reply-title small a:hover,
+	.sidebar .widget a,
+	.sidebar .widget ul li a:hover,
+	#site-bottom a:hover,
+	.author-box a:hover,
+	.page-content a:hover,
+	.entry-content a:hover,
+	.widget_tag_cloud .tagcloud a:hover:before,
+	.entry-tags .tag-links a:hover:before,
+	.content-loop .entry-title a:hover,
+	.content-list .entry-title a:hover,
+	.content-grid .entry-title a:hover,
+	article.hentry .edit-link a:hover,
+	.site-footer .widget ul li a:hover,
+	.comment-content a:hover,
+	.pagination .page-numbers.current,
+	.entry-tags .tag-links a:hover {
+		color: #1e73be;
+	}
+	#primary-menu li li a:hover,
+	#secondary-menu li li a:hover,
+	#primary-menu li li.current-menu-item a:hover,
+	#secondary-menu li li.current-menu-item a:hover,	
+	.widget_tag_cloud .tagcloud a:hover {
+		color: #1e73be !important;
+	}
+	.sf-menu li a:hover,
+	.sf-menu li.sfHover a,
+	.sf-menu li.current-menu-item a,
+	.sf-menu li.current-menu-item a:hover,
+	button,
+	.btn,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.entry-category a,
+	#back-top a:hover span,
+	.bx-wrapper .bx-pager.bx-default-pager a:hover,
+	.bx-wrapper .bx-pager.bx-default-pager a.active,
+	.bx-wrapper .bx-pager.bx-default-pager a:focus,
+	.sidebar .widget ul li:before,
+	.widget_newsletter input[type="submit"],
+	.widget_newsletter input[type="button"],
+	.widget_newsletter button,
+	.pagination .next {
+		background-color: #1e73be;
+	}
+	.pagination .next:after {
+		border-left-color: #1e73be;
+	}
+	#secondary-bar {
+		border-bottom-color: #1e73be;
+	}
+	.header-search,
+	.sf-menu li a:before {
+		border-color: #1e73be;
+	}
+</style>
+
+<style>.albumnavigator_skin{position:relative}.albumnavigator_skin *{box-sizing:border-box !important}.fla-albumnavigator-splash-grid{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center}.fla-albumnavigator-splash-grid.splash-classic{justify-content:unset}.fla-albumnavigator-cover-base-pint{position:relative;opacity:0;transition:opacity 0.45s, background-color 1s}.fla-albumnavigator-cover-base-pint .fla-albumnavigator-main-wrap{width:100%}.fla-albumnavigator-cover-base-pint .fla-albumnavigator-main-wrap .fla-albumnavigator-item-wrap{position:relative;width:100%;border-radius:inherit;overflow:hidden}.fla-albumnavigator-cover-base-pint img{display:block;border:0 !important;margin:0 !important;padding:0 !important;max-height:none !important;max-width:none !important;min-height:0 !important;min-width:0 !important;width:100% !important;height:auto !important;-webkit-backface-visibility:hidden;backface-visibility:hidden}.fla-albumnavigator-pint-style .fla-albumnavigator-item-wrap{cursor:pointer;border-radius:inherit}.fla-albumnavigator-pint-style .fla-albumnavigator-item-wrap .fla-albumnavigator-image-hover{position:absolute;top:0;left:0;bottom:0;right:0;opacity:1;transition:opacity 0.5s;background:linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.83) 99%, rgba(0,0,0,0.85) 100%)}.fla-albumnavigator-pint-style .fla-albumnavigator-item-wrap .fla-albumnavigator-title-wrap{position:absolute;bottom:0;left:0;transition:0.5s;transform:translate(0, 0);opacity:1;font-size:20px;line-height:23px;color:#fff;font-weight:300;display:block;text-align:left;margin:0 0 10px 10px;padding:5px 10px 5px 10px}.fla-albumnavigator-pint-style .fla-albumnavigator-item-wrap .fla-albumnavigator-badge-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%, -150%);opacity:0;width:50px;height:50px;padding:12px;border-radius:50%;background-color:#000000b5;fill:white;transition:0.5s}.fla-albumnavigator-pint-style .fla-albumnavigator-item-wrap .fla-albumnavigator-badge-wrap svg{width:100%;height:100%;fill:inherit;display:block}.fla-albumnavigator-pint-style.hover .fla-albumnavigator-image-hover{opacity:0}.fla-albumnavigator-pint-style.hover .fla-albumnavigator-badge-wrap{transform:translate(-50%, -50%);opacity:1}.fla-albumnavigator-pint-style .fla-albumnavigator-main-wrap .fla-albumnavigator-desc-wrap{position:relative;font-size:17px;line-height:20px;font-weight:300;display:block;text-align:left;padding:20px}.fla-albumnavigator-pint-style .fla-albumnavigator-main-wrap .fla-albumnavigator-desc-wrap .fla-albumnavigator-title-wrap{position:relative;color:inherit;line-height:1.2;font-weight:300;display:flex;flex-direction:row;justify-content:start;align-items:center}.fla-albumnavigator-pint-style .fla-albumnavigator-main-wrap .fla-albumnavigator-desc-wrap .fla-albumnavigator-title-wrap .fla-albumnavigator-count{margin:0 5px;white-space:nowrap}.fla-albumnavigator-pint-style .fla-albumnavigator-main-wrap .fla-albumnavigator-desc-wrap .fla-albumnavigator-description{color:inherit;margin:10px 0;padding:15px 0 0 0;border-top-width:1px;border-right-width:0;border-bottom-width:0;border-left-width:0;border-style:solid}.simple-alpha .fla-albumnavigator-item-hover,.simple-classic .fla-albumnavigator-item-hover{position:absolute;top:0;left:0;bottom:0;right:0;opacity:0;transition:opacity 0.5s}.simple-alpha .fla-albumnavigator-item-inner,.simple-classic .fla-albumnavigator-item-inner{cursor:pointer}.simple-alpha .fla-albumnavigator-item-inner .fla-albumnavigator-title-wrap,.simple-classic .fla-albumnavigator-item-inner .fla-albumnavigator-title-wrap{position:absolute;display:flex;flex-direction:row;align-items:center;padding:13px 17px;font-weight:500;line-height:1.2;left:0;bottom:0;transition:0.5s;transform:translate(0, 0)}.simple-alpha .fla-albumnavigator-item-inner .fla-albumnavigator-title-wrap .fla-albumnavigator-item-title,.simple-classic .fla-albumnavigator-item-inner .fla-albumnavigator-title-wrap .fla-albumnavigator-item-title{color:inherit;font-size:inherit;line-height:inherit}.simple-alpha .fla-albumnavigator-item-inner .fla-albumnavigator-title-wrap .fla-albumnavigator-item-counter,.simple-classic .fla-albumnavigator-item-inner .fla-albumnavigator-title-wrap .fla-albumnavigator-item-counter{color:inherit;font-size:inherit;line-height:inherit;margin:0 7px;white-space:nowrap}.simple-alpha:hover .fla-albumnavigator-item-hover{opacity:1}.simple-alpha:hover .fla-albumnavigator-title-wrap{transform:translate(0, -25%)}.simple-classic .fla-albumnavigator-item-inner{display:flex;flex-direction:column;justify-content:center}.simple-classic .fla-albumnavigator-title-wrap{flex-direction:column !important;justify-content:center;line-height:1.5 !important;bottom:unset !important;width:100%;text-align:center}.simple-classic .fla-albumnavigator-title-wrap .fla-albumnavigator-item-counter::before,.simple-classic .fla-albumnavigator-title-wrap .fla-albumnavigator-item-counter::after{content:'•'}.simple-classic img{transition:transform 0.7s ease}.simple-classic:hover img{transform:scale(1.05)}.simple-slide .fla-albumnavigator-item-wrap{cursor:pointer}.simple-slide .fla-albumnavigator-item-hover{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,0.8);animation-duration:0.2s;animation-play-state:running;animation-fill-mode:both;animation-timing-function:ease;transform:translate(0, -100%)}.simple-slide .fla-albumnavigator-item-inner{line-height:1.5;display:flex;flex-direction:column;flex-wrap:wrap;justify-content:center}.simple-slide .fla-albumnavigator-item-inner .fla-albumnavigator-title{margin:0 auto;color:inherit;font-size:inherit;line-height:inherit}.simple-slide .fla-albumnavigator-item-inner .fla-albumnavigator-counter{margin:0 auto;white-space:nowrap;font-style:italic;color:inherit;font-size:inherit;line-height:inherit}.simple-slide .fla-albumnavigator-item-inner .fla-albumnavigator-counter::before,.simple-slide .fla-albumnavigator-item-inner .fla-albumnavigator-counter::after{content:'•'}@keyframes fla-in-top{from{transform:translate(0, -100%)}to{transform:translate(0, 0)}}@keyframes fla-out-top{from{transform:translate(0, 0)}to{transform:translate(0, -100%)}}@keyframes fla-in-bottom{from{transform:translate(0, 100%)}to{transform:translate(0, 0)}}@keyframes fla-out-bottom{from{transform:translate(0, 0)}to{transform:translate(0, 100%)}}@keyframes fla-in-left{from{transform:translate(-100%, 0)}to{transform:translate(0, 0)}}@keyframes fla-out-left{from{transform:translate(0, 0)}to{transform:translate(-100%, 0)}}@keyframes fla-in-right{from{transform:translate(100%, 0)}to{transform:translate(0, 0)}}@keyframes fla-out-right{from{transform:translate(0, 0)}to{transform:translate(100%, 0)}}.fla-albumnavigator-splash-slider{position:relative;overflow:hidden}.fla-albumnavigator-slider-content-view{display:inline-flex;flex-direction:row}.fla-albumnavigator-splash-masonry{position:relative}.fla-albumnavigator-splash-masonry .splash-column{float:left}.fla-albumnavigator-justified-collection{position:relative;max-width:1300px;margin:0 auto}.fla-albumnavigator-justified-collection .fla-albumnavigator-content{display:flex;flex-direction:row;flex-wrap:wrap;min-height:150px}.fla-albumnavigator-collection-thumb-view.pgc-justified img{width:100% !important;height:100% !important}.fla-albumnavigator-collection-thumb-view .fla-albumnavigator-hover{opacity:0;transition:opacity 0.4s}.fla-albumnavigator-collection-thumb-view .fla-albumnavigator-item-badge{position:absolute;pointer-events:none;border-radius:50%;background-color:rgba(255,255,255,0.7);width:60px;height:60px;padding:10px;top:50%;left:50%;transform:translateY(-50%) translateX(-50%)}.fla-albumnavigator-collection-thumb-view .fla-albumnavigator-item-badge svg{display:block;width:100%;height:100%}.fla-albumnavigator-collection-thumb-view .fla-albumnavigator-item-title{color:inherit;line-height:1.5;padding:1em}.fla-albumnavigator-collection-thumb-view .fla-albumnavigator-interactiv{position:absolute;right:0;bottom:0;top:0;left:0}.fla-albumnavigator-collection-thumb-view .fla-albumnavigator-item-menu-holder{position:absolute;bottom:0;right:0;padding:5px;min-height:45px;transform:translateY(100%);transition:transform 0.5s}.fla-albumnavigator-collection-thumb-view.hover .fla-albumnavigator-hover{opacity:1}.fla-albumnavigator-collection-thumb-view.hover .fla-albumnavigator-item-menu-holder{transform:translateY(0)}
+</style><style>.pgc-rev-utils-preloader{min-height:inherit;position:absolute;top:0;left:0;bottom:0;right:0;overflow:hidden;z-index:100}.pgc-rev-utils-preloader .pgc-rev-utils-static{position:absolute;left:50%;top:50%;border-radius:50%}.pgc-rev-utils-preloader .pgc-rev-utils-spinner{left:50%;top:50%;animation:1s pgc-rev-spinner linear infinite}.pgc-rev-utils-preloader .pgc-rev-utils-spinner .pgc-rev-utils-point{position:absolute;left:50%;top:50%;border-radius:100%}@keyframes pgc-rev-spinner{0%{transform:rotate(-360deg)}100%{transform:rotate(0deg)}}
+</style><style>.pgc-rev-fillmode-thumb-view{position:relative;opacity:0;transition:opacity 0.45s}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-main-wrap{width:100%;height:100%}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-main-wrap .pgc-rev-fillmode-thumb-item-wrap{position:relative;width:100%;height:100%;border-radius:inherit;overflow:hidden}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-main-wrap .pgc-rev-fillmode-thumb-item-wrap img{position:absolute;display:block;border:0;margin:0;padding:0;max-height:none !important;max-width:none !important;min-height:0 !important;min-width:0 !important;-webkit-backface-visibility:hidden;backface-visibility:hidden}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-item-hover{position:absolute;top:0;left:0;width:100%;height:100%}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-item-inner{position:absolute;top:0;left:0;width:100%;height:100%}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-image-substitute{position:relative;box-shadow:inset 0 0 100px rgba(0,0,0,0.5),inset 0 0 0 1px rgba(0,0,0,0.05);background:#eee;width:100%;display:flex;flex-direction:column;justify-content:center;align-content:center}.pgc-rev-fillmode-thumb-view .pgc-rev-fillmode-thumb-image-substitute svg{width:50px;height:50px}
+</style><style>.pgc-rev-item-menu-view{position:relative;overflow:hidden;float:left}.pgc-rev-item-menu-view.pgc-rev-item-menu-type-ultrabox{display:flex;flex-direction:row;flex-wrap:wrap;margin-right:5px}.pgc-rev-item-menu-view.pgc-rev-item-menu-type-ultrabox .pgc-rev-item-menu-button{padding:3px;width:43px;height:43px;margin:0 5px;border-radius:2px}.pgc-rev-item-menu-view.pgc-rev-item-menu-type-lightbox .pgc-rev-item-menu-button{margin:2px}.pgc-rev-item-menu-view.pgc-rev-item-menu-type-thumb{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-end}.pgc-rev-item-menu-view.pgc-rev-item-menu-type-thumb .pgc-rev-item-menu-button{margin:1px}.pgc-rev-item-menu-view .pgc-rev-item-menu-button{position:relative;padding:9px;width:38px;height:38px;cursor:pointer;float:left;transition:background-color 0.2s, transform 0.4s ease-out;border-radius:2px}.pgc-rev-item-menu-view .pgc-rev-item-menu-button svg{width:100%;height:100%;fill:inherit;display:block;pointer-events:none;transition:fill 0.2s, transform 0.4s ease-out}.pgc-rev-item-menu-view .pgc-rev-item-menu-button svg path{transition:none}
+</style><style>.pgc-rev-scroller-ho-view{line-height:1;overflow-y:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:none;-ms-overflow-style:none;scrollbar-width:none}.pgc-rev-scroller-ho-view::-webkit-scrollbar{display:none}.pgc-rev-scroller-ho-view.pgc-block-pan-y{-ms-touch-action:pan-x;touch-action:pan-x}.pgc-rev-scroller-ho-grabbable{cursor:move;cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}.pgc-rev-scroller-ho-grabbable:active{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing}
+</style><style>.pgc-rev-scroll-bar-view{position:relative;overflow:hidden;max-width:100%}.pgc-rev-scroll-bar-view .pgc-rev-scroll-bar-slider-content-view{position:relative}.pgc-rev-scroll-bar-thumb-simple-border{position:absolute}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-main-wrap{position:relative;width:100%;height:100%;border-radius:inherit}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-item-wrap{position:relative;width:100%;height:100%;border-radius:inherit;overflow:hidden}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-item-wrap img{object-fit:cover;display:block;border:0;margin:0;padding:0;width:100% !important;height:100% !important;-webkit-backface-visibility:hidden;backface-visibility:hidden}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-item-hover{position:absolute;top:0;left:0;width:100%;height:100%;opacity:1;transition:0.4s}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-item-inner{position:absolute;top:0;left:0;width:100%;height:100%}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-item-link{position:absolute;width:34px;height:34px;padding:6px;border-radius:50%;left:50%;top:50%;transform:translateY(-50%) translateX(-50%);pointer-events:none}.pgc-rev-scroll-bar-thumb-simple-border .pgc-rev-scroll-bar-thumb-item-link svg{width:100%;height:100%;fill:rgba(0,0,0,0.58);display:block}.pgc-rev-scroll-bar-thumb-simple-border video{height:100%;width:100%;object-fit:contain}.pgc-rev-scroll-bar-thumb-simple-border.hover .pgc-rev-scroll-bar-thumb-hover,.pgc-rev-scroll-bar-thumb-simple-border.pgc-select .pgc-rev-scroll-bar-thumb-hover{opacity:0}.pgc-rev-scroll-bar-grabbable{cursor:move;cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}.pgc-rev-scroll-bar-grabbable:active{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing}
+</style><style>.pgc-rev-slider-view{position:absolute;overflow:hidden;left:0;right:0;top:0;bottom:0}.pgc-rev-slider-view *{box-sizing:border-box !important;line-height:1.4}.pgc-rev-slider-view.isDragging video{pointer-events:none}.pgc-rev-slider-view .pgc-rev-slider-hints{position:absolute;display:inline-block;padding:5px 10px;font-size:12px;line-height:normal;background-color:rgba(0,0,0,0.8);color:white;transform:translateY(-100%);border-radius:2px;transition:0.4s}.pgc-rev-slider-view.pgc-rev-slider-activate{pointer-events:auto;visibility:visible;opacity:1}.pgc-rev-slider-view .pgc-rev-slider-bg{width:100%;height:100%;transform:translateZ(0)}.pgc-rev-slider-view .pgc-rev-slider-wrap{position:absolute;user-select:none;width:100%;top:0;bottom:0}.pgc-rev-slider-view .miniScreen{margin-top:0;margin-bottom:0}.pgc-rev-slider-view .pgc-rev-slider-next-prev-button{position:absolute;width:45px;height:40px;top:50%;margin:0 10px;padding:0;cursor:pointer;transition:background-color 0.3s, transform 0.5s ease-out;border-radius:2px}.pgc-rev-slider-view .pgc-rev-slider-next-prev-button.next-prev-button-mini-screen{display:none}.pgc-rev-slider-view .pgc-rev-slider-next-prev-button svg{transition:fill 0.3s;width:100%;height:100%;vertical-align:baseline !important}.pgc-rev-slider-page-view{position:absolute;display:block;transform:translate3d(0, 0, 0);width:100%;top:0;bottom:0;left:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;-moz-user-select:none;-ms-user-select:none;touch-action:none}.pgc-rev-slider-page-view .pgc-rev-slider-page-place-holder{position:absolute;transition:0.35s ease-out;user-select:none}.pgc-rev-slider-page-view .pgc-rev-slider-page-place-holder.bg-mode{box-shadow:inset 0 0 100px rgba(0,0,0,0.5),inset 0 0 0 1px rgba(0,0,0,0.05);background:#eee}.pgc-rev-slider-page-view .pgc-rev-slider-page-place-holder video{max-width:100%;min-width:100%;max-height:100%;margin:auto;outline:none}.pgc-rev-slider-page-view .pgc-rev-slider-page-place-holder img{object-fit:cover;width:100%;height:100%}.pgc-rev-slider-page-view .pgc-rev-slider-page-place-holder img.onLoad{transition:0.35s ease-out;opacity:1}.pgc-rev-slider-page-view .pgc-rev-slider-page-inner{position:absolute;display:block;left:0;top:0;bottom:0;width:100%;overflow:hidden;transform:translate3d(0, 0, 0);backface-visibility:hidden;-webkit-backface-visibility:hidden;-webkit-transform-origin:left top;transform-origin:left top;user-select:none;touch-action:none;animation-duration:0.6s;animation-play-state:running;animation-fill-mode:both;animation-timing-function:ease-out}.pgc-rev-slider-page-view .pgc-rev-slider-page-inner img{-webkit-backface-visibility:hidden;backface-visibility:hidden;position:absolute !important;display:block !important;border:none !important;max-width:none !important;opacity:0;padding:0 !important;margin:0 !important;user-select:none;-webkit-tap-highlight-color:transparent}.pgc-rev-slider-page-view .pgc-rev-slider-page-inner img.iph-protect{-webkit-touch-callout:none}.pgc-rev-slider-page-view .pgc-rev-slider-page-inner img.onLoad{transition:0.35s ease-out;opacity:1}.pgc-rev-slider-page-view .pgc-rev-slider-page-sub-content-holder{position:absolute;visibility:hidden;transition:0.35s ease-out}.pgc-rev-slider-page-view .pgc-rev-slider-page-sub-content-holder .icon-holder{position:absolute;width:140px;height:140px;border-radius:50%;background-color:rgba(255,255,255,0.6);transform:translateY(-50%) translateX(-50%);left:50%;top:50%;padding:30px;cursor:pointer}.pgc-rev-slider-page-view .pgc-rev-slider-page-sub-content-holder .icon-holder svg{width:100%;height:100%;fill:rgba(0,0,0,0.4)}.pgc-rev-slider-page-view .pgc-rev-slider-page-sub-content-holder iframe{width:100% !important;height:100% !important;top:0;left:0}.pgc-rev-slider-page-view .pgc-rev-slider-page-sub-content-holder audio{outline:none;position:absolute;bottom:0;width:100%}.pgc-rev-slider-page-view.info-icon .pgc-rev-slider-page-sub-content-holder,.pgc-rev-slider-page-view.info-icon .pgc-rev-slider-page-icon-holder{visibility:visible}@keyframes pgc-rev-fade-in{from{opacity:0}to{opacity:1}}@keyframes pgc-rev-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.pgc-rev-wrap-rotate svg{animation-name:pgc-rev-rotate;animation-duration:2s;animation-iteration-count:infinite;animation-timing-function:linear}.pgc-rev-slider-post-informer-view{position:absolute;height:100%;width:100%}.pgc-rev-slider-post-informer-view .pgc-rev-slider-post-informer-button,.pgc-rev-slider-post-informer-view .pgc-rev-slider-post-informer-price{position:relative;cursor:pointer;display:inline-block;left:0;top:0;font-size:30px;line-height:33px;color:#fff;margin:10px 0 0 0;padding:3px 20px;background-color:rgba(0,0,0,0.8)}.pgc-rev-slider-post-informer-view .pgc-rev-slider-post-informer-price{font-size:22px;cursor:auto;margin:5px 0 0 0}.pgc-rev-slider-post-informer-view .pgc-rev-slider-post-informer-button:hover{background-color:#fff;color:rgba(0,0,0,0.8)}
+</style><style>.pgc-rev-lb-b-view{position:fixed;z-index:99999;left:0;right:0;top:0;bottom:0;visibility:hidden;opacity:0;-ms-touch-action:none;touch-action:none;-webkit-text-size-adjust:100%;font-family:Arial, Helvetica, sans-serif;-webkit-transition:opacity 0.4s ease;transition:opacity 0.4s ease, visibility 0.4s ease}.pgc-rev-lb-b-view *{box-sizing:border-box !important;line-height:1.4}.pgc-rev-lb-b-view.pgc-rev-lb-b-activate{pointer-events:auto;visibility:visible;opacity:1}.pgc-rev-lb-b-view .pgc-rev-lb-b-bg{width:100%;height:100%;will-change:opacity;transform:translateZ(0)}.pgc-rev-lb-b-view .pgc-rev-lb-b-bg.pgc-rev-lb-b-deactivate{transition:opacity 300ms}.pgc-rev-lb-b-view .pgc-rev-lb-b-content{position:absolute;top:0;left:0;width:100%;height:100%}.pgc-rev-lb-b-view .pgc-rev-lb-b-header{position:absolute;padding:5px;left:0;top:0;width:100%;display:flex;flex-direction:row;flex-wrap:wrap;transform:translateY(-100%);transition:transform 0.4s ease-out}.pgc-rev-lb-b-view .pgc-rev-lb-b-header *{user-select:none;-moz-user-select:none;-webkit-user-select:none}.pgc-rev-lb-b-view .pgc-rev-lb-b-header.pgc-rev-lb-b-show{transform:translateY(0%)}.pgc-rev-lb-b-view .pgc-rev-lb-b-header.pgc-rev-lb-b-touch-device{justify-content:flex-end}.pgc-rev-lb-b-view .pgc-rev-lb-b-footer{user-select:none;position:absolute;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;left:0;bottom:0;width:100%;transform:translateY(100%);transition:transform 0.4s ease-out}.pgc-rev-lb-b-view .pgc-rev-lb-b-footer.pgc-rev-lb-b-show{transform:translateY(0%)}.pgc-rev-lb-b-view .pgc-rev-lb-b-footer.pgc-rev-lb-b-touch-device .pgc-rev-lb-b-caption-wrap{border-radius:2px;padding:0}.pgc-rev-lb-b-view .pgc-rev-lb-b-footer.pgc-rev-lb-b-touch-device .pgc-rev-lb-b-caption-play-wrap{width:100%;justify-content:center;min-height:25px}.pgc-rev-lb-b-view .pgc-rev-lb-b-footer .pgc-rev-lb-b-caption-wrap{border-radius:2px;padding:3px 10px;margin:5px}.pgc-rev-lb-b-view .pgc-rev-lb-b-description-wrap{flex:none;width:400px;max-width:100%;padding:0 5px;height:100%}.pgc-rev-lb-b-view .pgc-rev-lb-b-description-wrap a{cursor:pointer}.pgc-rev-lb-b-view .pgc-rev-lb-b-description-wrap a:hover,.pgc-rev-lb-b-view .pgc-rev-lb-b-description-wrap a:visited,.pgc-rev-lb-b-view .pgc-rev-lb-b-description-wrap a:link,.pgc-rev-lb-b-view .pgc-rev-lb-b-description-wrap a:active{text-decoration:none;box-shadow:none}.pgc-rev-lb-b-view .pgc-rev-lb-b-item-title{text-rendering:auto;color:#fff;font-size:18px;width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:1.3;box-sizing:content-box;letter-spacing:0;margin-top:1px;margin-bottom:3px;text-decoration:none !important;box-shadow:none !important}.pgc-rev-lb-b-view .pgc-rev-lb-b-item-description{color:#969696;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3}.pgc-rev-lb-b-view .pgc-rev-lb-b-free-space{flex:auto}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-play-wrap{display:flex;align-items:center}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap{position:relative;flex:none;font-size:13px;line-height:22px;font-weight:400;color:white;display:inline-block;margin-right:15px}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap .pgc-rev-lb-b-caption-current{position:relative;display:inline-block}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap .pgc-rev-lb-b-caption-delimiter{position:relative;display:inline-block;padding:0 3px}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap .pgc-rev-lb-b-caption-all{position:relative;display:inline-block}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap-nt.mini-screen{height:30px}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap-nt{position:relative;flex:none;width:60px;height:40px;font-size:15px;line-height:1;font-weight:400;font-family:serif;color:white;margin-right:5px}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap-nt .pgc-rev-lb-b-caption-current{position:absolute;top:50%;left:50%;width:30px;text-align:right;transform:translate(-100%, -70%);padding:0 5px 0}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap-nt .pgc-rev-lb-b-caption-delimiter{position:absolute;top:50%;left:50%;transform:translate(-50%, 0) rotate(-58deg);width:19px;height:1.5px;background-color:white}.pgc-rev-lb-b-view .pgc-rev-lb-b-caption-wrap-nt .pgc-rev-lb-b-caption-all{position:absolute;top:50%;left:50%;font-size:11px;margin-left:5px}.pgc-rev-lb-b-view .pgc-rev-lb-auto-play-wrap{position:relative;opacity:0;height:22px;transition:opacity 0.4s}.pgc-rev-lb-b-view .pgc-rev-lb-b-info-wrap{position:relative;flex:none;min-height:20px;padding:0 10px;max-width:100%}.pgc-rev-lb-b-view .pgc-rev-lb-b-item-menu-wrap{position:relative;flex:none;min-width:40px;overflow:hidden}.pgc-rev-lb-auto-play-wrap svg{width:22px;height:22px}.pgc-rev-lb-auto-play-wrap svg path{transition:unset}
+</style><style>.pgc-rev-np-navi-view{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between;align-items:center;user-select:none;margin-top:5px}.pgc-rev-np-navi-view *{box-sizing:border-box !important}.pgc-rev-np-navi-view .pgc-rev-np-navi-button{float:none;width:60px;height:24px;cursor:pointer;transition:opacity 0.5s}.pgc-rev-np-navi-view .pgc-rev-np-navi-button svg{display:block;width:100%;height:100%;fill:inherit}.pgc-rev-np-navi-view .pgc-rev-np-navi-button.pgc-desable{pointer-events:none;cursor:none;opacity:0.5}.pgc-rev-np-navi-view .pgc-rev-np-navi-button.pgc-remove{visibility:hidden}.pgc-rev-np-navi-view .pgc-rev-np-navi-sub-view{width:100%}.pgc-rev-bulet-view{position:relative;padding:10px;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;user-select:none}.pgc-rev-bulet-view *{box-sizing:border-box !important}.pgc-rev-bulet-view .pgc-rev-bulet-bulet{border-radius:50%;margin:4px;cursor:pointer;transition:0.3s;transition-delay:0.1s}.pgc-rev-bulet-view .pgc-rev-bulet-bulet.hover{transform:scale(1.3)}.pgc-rev-bulet-view.pgc-remove{visibility:hidden}.pgc-rev-scr-bar-view{position:relative;margin:5px 0 0;visibility:hidden;width:100%}.pgc-rev-scr-bar-view .pgc-rev-scr-bar-track{position:relative;left:0;top:0;right:0;bottom:0;border-radius:inherit}.pgc-rev-scr-bar-view .pgc-rev-scr-bar-track>div{border-radius:inherit}.pgc-rev-scr-bar-view .pgc-rev-scr-bar-bar{position:absolute;top:0;left:0;height:100%;transform-origin:left top;transform:translateX(0);border-radius:inherit}.pgc-rev-scr-bar-view .pgc-rev-scr-bar-bar>div{height:100%;border-radius:inherit;transition:transform 0.2s}.pgc-rev-scr-bar-view .pgc-rev-scr-bar-bar:hover>div{transform:scaleY(1.2);box-shadow:0 0 3px #000}.pgc-rev-scr-bar-view.pgc-enable{visibility:visible}.pgc-rev-scr-bar-view.pgc-mini-screen{margin:2px 0 0;opacity:0.5}
+</style><style>.pgc-rev-modal-window{position:fixed;-webkit-backface-visibility:hidden;backface-visibility:hidden;top:0;left:0;right:0;bottom:0;overflow:hidden;opacity:0;will-change:opacity;transition:opacity 0.4s;text-align:center}.pgc-rev-modal-window *{box-sizing:border-box}.pgc-rev-modal-window .pgc-rev-modal-flex{display:inline-block;width:0;height:100%;vertical-align:middle}.pgc-rev-modal-window .pgc-rev-modal-close-button{position:absolute;width:100%;height:100%;z-index:-100;will-change:opacity}
+</style><style>:root{--right-marg: 0}.pgc-rev-fs-modal-wrap-html{overflow:hidden;margin-right:var(--right-marg)}.pgc-rev-fs-modal-wrap-view{position:fixed;top:0;bottom:0;left:0;right:0;pointer-events:auto;overflow-y:auto;-webkit-overflow-scrolling:touch}.pgc-rev-fs-modal-wrap-view *{box-sizing:border-box !important}.pgc-rev-fs-modal-wrap-view .pgc-rev-fs-modal-wrap-free-space{flex:auto}.pgc-rev-fs-modal-wrap-view.pgc-clear-scroll::-webkit-scrollbar{display:none}.pgc-rev-fs-modal-wrap-bg{position:fixed;top:0;left:0;width:100%;height:100%;will-change:opacity;transition:0.4s;transform:translateY(-100%);background-color:white}
+</style><style>.pgc-rev-collection-collection-page .pgc-rev-collection-header{position:relative;width:100%;display:flex;min-height:50px;overflow:hidden;flex-direction:column;justify-content:center;transform:translateY(-100%);transition:transform 0.3s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-title{margin:20px auto 5px;padding:0 40px;font-size:1.3em}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-description{margin:5px auto 7px;padding:0 10px;text-align:center;font-size:1em;max-width:640px}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-navi-wrap{margin:0 auto 3px;text-align:center}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-navi-wrap .pgc-rev-collection-button{display:inline-block;width:38px;height:38px;margin:0 3px;padding:6px;border-radius:2px;cursor:pointer}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-navi-wrap .pgc-rev-collection-button svg{display:block;width:100%;height:100%}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-close-button{position:absolute;top:0;right:0;margin:4px;width:38px;height:38px;padding:4px;border-radius:2px;cursor:pointer}.pgc-rev-collection-collection-page .pgc-rev-collection-header .pgc-rev-collection-close-button svg{width:100%;height:100%}.pgc-rev-collection-collection-page .pgc-rev-collection-header.pgc-rev-collection-init{transform:translateY(0)}.pgc-rev-collection-collection-page .pgc-rev-collection-content{position:relative;margin:10px auto 20px;min-height:150px}.pgc-rev-collection-header-fixed{position:fixed;top:0;left:0;min-height:50px;display:flex;flex-direction:row;justify-content:space-between;align-items:center;transform:translateY(-100%);transition:transform 0.3s;background-color:white;box-shadow:0 1px 3px rgba(0,0,0,0.05)}.pgc-rev-collection-header-fixed .pgc-rev-collection-title{margin:0 20px;font-size:1.3em;flex:none}.pgc-rev-collection-header-fixed .pgc-rev-collection-navi-wrap{margin:0 20px;flex:none}.pgc-rev-collection-header-fixed .pgc-rev-collection-navi-wrap .pgc-rev-collection-button{display:inline-block;width:48px;height:48px;margin:0 3px;padding:4px}.pgc-rev-collection-header-fixed .pgc-rev-collection-navi-wrap .pgc-rev-collection-button svg{width:100%;height:100%}.pgc-rev-collection-header-fixed .pgc-rev-collection-close-button{top:0;right:0;width:38px;height:38px;padding:4px;margin:4px;cursor:pointer;flex:none}.pgc-rev-collection-header-fixed .pgc-rev-collection-close-button svg{width:100%;height:100%}.pgc-rev-collection-header-fixed.pgc-rev-collection-init{transform:translateY(0)}
+</style><style>.pgc-rev-modal-page-view{position:relative;font-size:14px;line-height:1.3;margin:0 10px;padding-bottom:10px;max-width:720px;min-width:260px;background-color:white;border-radius:2px;box-shadow:0 8px 16px rgba(0,0,0,0.15);vertical-align:middle;display:inline-block}.pgc-rev-modal-page-view .pgc-rev-modal-page-close-button{position:absolute;margin:10px;width:24px;height:24px;cursor:pointer;right:0}.pgc-rev-modal-page-view .pgc-rev-modal-page-close-button svg{width:100%;height:100%;vertical-align:baseline !important}
+</style><style>.fla-item-info-content{position:relative;overflow:hidden;min-height:36px;margin-right:35px}.fla-item-info-content .fla-item-info-fun{font-size:34px;margin:10px 0 5px}.fla-item-info-content .fla-item-info-description-wrap{min-width:200px;min-height:44px;padding:10px 0 0 20px;float:left;text-align:left;font-size:1em}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-item-title{font-size:1.3em;font-weight:600}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-item-description{margin-top:3px;font-size:1em;font-weight:400}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-terms-list{list-style:none;margin:0;overflow:hidden;padding:0}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-terms-list.fla-item-info-tags-ul{font-size:1rem !important;line-height:1.4 !important;margin-bottom:0 !important;margin-left:0 !important}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-terms-list.fla-item-info-tags-ul li{border-radius:3px;display:inline-block;height:26px;line-height:26px;padding:0 20px 0 23px;position:relative;margin:0 7px 10px 0;text-decoration:none;cursor:pointer;transition:0.3s}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-meta-exif-value{line-height:1.5;display:inline-block}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-meta-exif-separator{display:inline-block;font-size:100%;margin:0 4px;opacity:0.4}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-likes-view-com{position:relative;min-width:60px;min-height:40px;border:1px solid;border-color:rgba(0,0,0,0.18);border-radius:2px;background-color:#fafafa;padding:4px;margin:0 1%;text-align:center;display:inline-block}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-likes-view-com svg{display:inline-block;width:24px;height:24px;vertical-align:baseline !important}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-likes-view-com .fla-item-info-counter-text{font-size:15px;line-height:1}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-item-date{font-size:100%;line-height:1.9}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-item-date .fla-item-info-item-meta-key{float:left;width:40%;min-width:80px}.fla-item-info-content .fla-item-info-description-wrap .fla-item-info-item-date .fla-item-info-item-meta-value{float:left;white-space:nowrap;text-transform:capitalize}
+</style><style>.fla-item-share-description-wrap{min-height:44px;padding:10px 20px 0 20px;float:left;text-align:left}.fla-item-share-description-wrap .fla-item-share-item-title{display:block;font-size:130%;font-weight:600;line-height:1.3}.fla-item-share-description-wrap .fla-item-share-item-button-wrap{position:relative;display:inline-block;padding:0 4px;min-width:130px;width:50%;height:42px}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-button{border:1px solid;border-color:rgba(0,0,0,0.18);cursor:pointer;width:100%;height:100%;border-radius:2px;background-color:#fafafa;transition:0.4s}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-button svg{width:40px;height:40px;float:left;vertical-align:baseline !important}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-button .fla-item-share-button-title{white-space:nowrap;position:absolute;left:30px;right:0;font-size:15px;font-weight:400;line-height:41px;text-align:center;opacity:0.7;transition:opacity 0.4s}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-button:hover{box-shadow:0 1px 4px rgba(0,0,0,0.2)}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-button:hover .fla-item-share-button-title{opacity:1}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-copy-link{background-color:#fafafa;border:solid 1px rgba(0,0,0,0.17);width:100%;height:100%;border-radius:2px;overflow:hidden;position:relative;cursor:pointer;transition:0.4s}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-copy-link .fla-item-share-button-title{position:absolute;white-space:nowrap;line-height:41px;left:41px;right:10px;overflow:hidden;opacity:0.7;transition:0.4s}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-copy-link svg{width:40px;height:40px;padding:4px;float:left;transition:fill 0.4s;vertical-align:baseline !important}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-copy-link:hover{box-shadow:0 1px 4px rgba(0,0,0,0.2)}.fla-item-share-description-wrap .fla-item-share-item-button-wrap .fla-item-share-item-copy-link:hover .fla-item-share-button-title{opacity:1}
+</style></head>
+
+<body data-rsssl="1" class="post-template-default single single-post postid-1239 single-format-standard custom-background wp-embed-responsive group-blog">
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div id="primary-bar" class="container">
+
+			<nav id="primary-nav" class="primary-navigation">
+
+				<div class="menu-top-menu-container"><ul id="primary-menu" class="sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12"><a href="https://cs360studio.com/">Home</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://cs360studio.com/about/">About</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://cs360studio.com/contact/">Contact</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://cs360studio.com/disclosure/">Disclosure</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-40"><a href="https://cs360studio.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://cs360studio.com/terms-of-use/">Terms of Use</a></li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+			
+			<div class="header-search">
+				<form id="searchform" method="get" action="https://cs360studio.com/">
+					<input type="search" name="s" class="search-input" placeholder="Search for..." autocomplete="off">
+					<button type="submit" class="search-submit"><span class="genericon genericon-search"></span></button>		
+				</form>
+			</div><!-- .header-search -->	
+					
+			
+		</div><!-- #primary-bar -->
+
+		<div class="site-start container">
+
+			<div class="site-branding">
+
+								
+				<div id="logo">
+					<span class="helper"></span>
+					<a href="https://cs360studio.com/" rel="home">
+						<img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/cs360studioCOM_header2.jpg" alt="">
+					</a>
+				</div><!-- #logo -->
+
+				
+			</div><!-- .site-branding -->						
+
+			<div id="happythemes-ad-18" class="header-ad widget_ad ad-widget"><h3 class="widget-title">Speechelo</h3><div class="adwidget"><a href="https://1898e35od-bxbkak27nxscxf1j.hop.clickbank.net/" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/speechelo4.jpg"></a></div></div>	
+
+		</div><!-- .site-start .container -->
+
+		<div id="secondary-bar" class="container">
+
+			<nav id="secondary-nav" class="secondary-navigation">
+
+				<div class="menu-main-menu-container"><ul id="secondary-menu" class="sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li id="menu-item-258" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-258"><a href="https://cs360studio.com/whats-new/">What’s New</a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://cs360studio.com/web-development/">Web Development</a></li>
+<li id="menu-item-545" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-545"><a href="https://cs360studio.com/tech-and-more-news/">Tech &amp; News!</a></li>
+<li id="menu-item-2985" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2985"><a href="https://cs360studio.com/finance/">Finance</a></li>
+<li id="menu-item-7125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7125"><a href="https://cs360studio.com/crypto/">Crypto</a></li>
+<li id="menu-item-769" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-769"><a href="https://cs360studio.com/faith/">Faith</a></li>
+<li id="menu-item-5798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5798"><a href="https://cs360studio.com/jesus-speaks/">Jesus Speaks</a></li>
+<li id="menu-item-554" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-554"><a href="https://cs360studio.com/speechelo-instantly-transform-any-text-into-a-100-human-sounding-voiceover-with-only-3-clicks/">Speechelo</a></li>
+<li id="menu-item-3033" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3033"><a href="https://cs360studio.com/free-stock-photos/">Free Stock Photos</a></li>
+</ul></div>
+			</nav><!-- #secondary-nav -->
+
+		</div><!-- #secondary-bar -->
+
+		<span class="mobile-menu-icon">
+			<span class="menu-icon-open">Menu</span>
+			<span class="menu-icon-close"><span class="genericon genericon-close"></span></span>		
+		</span>	
+
+					
+			<span class="search-icon">
+				<span class="genericon genericon-search"></span>
+				<span class="genericon genericon-close"></span>			
+			</span>
+
+			<div class="mobile-search">
+				<form id="searchform" method="get" action="https://cs360studio.com/">
+					<input type="search" name="s" class="search-input" placeholder="Search for..." autocomplete="off">
+					<button type="submit" class="search-submit"><span class="genericon genericon-search"></span></button>		
+				</form>
+			</div><!-- .header-search -->					
+
+		
+		<div class="mobile-menu clear">
+
+			<div class="container">
+
+			<div class="menu-left"><h3>Pages</h3><div class="menu-top-menu-container"><ul id="primary-mobile-menu" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12"><a href="https://cs360studio.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="https://cs360studio.com/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://cs360studio.com/contact/">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://cs360studio.com/disclosure/">Disclosure</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-40"><a href="https://cs360studio.com/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://cs360studio.com/terms-of-use/">Terms of Use</a></li>
+</ul></div></div><div class="menu-right"><h3>Categories</h3><div class="menu-main-menu-container"><ul id="secondary-mobile-menu" class=""><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-258"><a href="https://cs360studio.com/whats-new/">What’s New</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-544"><a href="https://cs360studio.com/web-development/">Web Development</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-545"><a href="https://cs360studio.com/tech-and-more-news/">Tech &amp; News!</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2985"><a href="https://cs360studio.com/finance/">Finance</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7125"><a href="https://cs360studio.com/crypto/">Crypto</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-769"><a href="https://cs360studio.com/faith/">Faith</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5798"><a href="https://cs360studio.com/jesus-speaks/">Jesus Speaks</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-554"><a href="https://cs360studio.com/speechelo-instantly-transform-any-text-into-a-100-human-sounding-voiceover-with-only-3-clicks/">Speechelo</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3033"><a href="https://cs360studio.com/free-stock-photos/">Free Stock Photos</a></li>
+</ul></div></div>
+			</div><!-- .container -->
+
+		</div><!-- .mobile-menu -->					
+
+	</header><!-- #masthead -->	
+
+<div id="content" class="site-content container clear">
+
+	<div id="primary" class="content-area">
+
+		<main id="main" class="site-main">
+
+		
+<article id="post-1239" class="post-1239 post type-post status-publish format-standard has-post-thumbnail hentry category-web-development category-whats-new tag-npm-scripts">
+
+		<div class="breadcrumbs">
+		<span class="breadcrumbs-nav">
+			<a href="https://cs360studio.com/">Home</a>
+			<span class="post-category"><a href="https://cs360studio.com/web-development/" title="View all posts in Web Development">Web Development</a> </span>
+			<span class="post-title">Bootcamp Notes – Day 11 (Tues) – Bootstrap: Building and Deployment: NPM Scripts</span>
+		</span>
+	</div>
+	
+	<header class="entry-header">	
+		
+		<h1 class="entry-title">Bootcamp Notes – Day 11 (Tues) – Bootstrap: Building and Deployment: NPM Scripts</h1>
+		<div class="entry-meta">
+
+	<span class="entry-author"><a href="https://cs360studio.com/author/chipshep444/" title="Posts by CS" rel="author">CS</a></span> 
+	<span class="entry-date">Feb 02, 2021</span>
+	<span class="entry-comment"><span class="comments-link">comments off</span></span>
+
+</div><!-- .entry-meta -->
+		
+					
+			<span class="entry-share clear">
+
+	<a class="twitter social-twitter" href="https://twitter.com/intent/tweet?text=Bootcamp+Notes+%26%238211%3B+Day+11+%28Tues%29+%26%238211%3B+Bootstrap%3A+Building+and+Deployment%3A+NPM+Scripts&amp;url=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/icon-twitter-white.png" alt="Twitter"><span>Tweet on Twitter</span></a>
+
+	<a class="facebook social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/icon-facebook-white.png" alt="Facebook"><span>Share on Facebook</span></a>
+
+	<a class="pinterest social-pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F&amp;media=https%3A%2F%2Fcs360studio.com%2Fwp-content%2Fuploads%2F2021%2F02%2F20190815_134536.jpg" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/icon-pinterest-white.png" alt="Pinterest"><span>Pinterest</span></a>
+
+</span><!-- .entry-share -->
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+			
+		<div class="code-block code-block-1" style="margin: 8px auto; text-align: center; display: block; clear: both;">
+<a href="https://987d4042lq3v6n6iycibq5ph01.hop.clickbank.net/" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/speechelo4(1).jpg"></a></div>
+<p><img class="aligncenter wp-image-1240 size-medium" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/20190815_134536-300x225.jpg" alt="20190815 134536" width="300" height="225" srcset="https://cs360studio.com/wp-content/uploads/2021/02/20190815_134536-300x225.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/02/20190815_134536.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" title="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building and Deployment: NPM Scripts 1"></p>
+<h1 id="yui_3_17_2_1_1612210191773_51" style="text-align: center;"><span style="color: #0000ff;">Building and Deployment: NPM Scripts</span></h1>
+<p>In this section you will learn about getting your files ready for deployment to a web server. Will also learn how to use NPM scripts to automate the whole process. First let’s talk about the ways that we can optimize our project files and specifically what we are talking about is optimizing your files for speed. Making them smaller so they can be downloaded faster. Pages that don’t get a lot of traffic this step may not be so important but if you are working on more complex web pages or with higher traffic sites then you want to do everything you can to decrease the file sizes without sacrificing quality.</p><div class="code-block code-block-4" style="margin: 8px 0; clear: both;">
+<a href="https://www.ebay.com/e/_electronics/best-of-tech-deals?mkcid=1&amp;mkrid=711-53200-19255-0&amp;siteid=0&amp;campid=5338913113&amp;toolid=20014&amp;customid=&amp;mkevt=1">eBay Electronics: Best tech for way less - Up to 50% off and free shipping</a></div>
+
+<ul>
+<li>Automation through NPM scripts</li>
+<li>Image Compression &amp; Minification</li>
+</ul>
+<p><strong>Minification</strong> is the process of removing: spaces, tabs, line breaks, comments, etc to decrease file size. Those extra characters can really take up space over time. If you think about it, all of our code could just be on one line!</p>
+<p>NPM can:</p>
+<ul>
+<li>Run Scripts</li>
+<li>Handle Build Tasks</li>
+<li>Ready Your Project for deployment</li>
+</ul>
+<hr>
+<h2><span style="color: #0000ff;">NPM Scripts – Part 1</span></h2>
+<p>We will begin preparing for the process of building for deployment by moving any JavaScript out of the HTML files and into an external JavaScript file.</p><div class="code-block code-block-2" style="margin: 8px 0; clear: both;">
+<a href="https://307ca542el3scx14s94v0r1teo.hop.clickbank.net/" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/trafficzion2.jpg"></a></div>
+
+<p>First we need to move our JavaScript over to a <strong><span style="color: #0000ff;">scripts.js</span></strong> file.</p><div class="code-block code-block-3" style="margin: 8px 0; clear: both;">
+<a href="https://www.ebay.com/e/_electronics/best-of-tech-deals?mkcid=1&amp;mkrid=711-53200-19255-0&amp;siteid=0&amp;campid=5338913113&amp;toolid=20014&amp;customid=&amp;mkevt=1">eBay Electronics: Best tech for way less - Up to 50% off and free shipping</a></div>
+
+<p><img loading="lazy" class="alignnone size-full wp-image-1280" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/bootstrap_fullstack_week4_09.jpg" alt="bootstrap fullstack week4 09" width="1543" height="459" srcset="https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_09.jpg 1543w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_09-300x89.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_09-1024x305.jpg 1024w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_09-768x228.jpg 768w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_09-1536x457.jpg 1536w" sizes="(max-width: 1543px) 100vw, 1543px" title="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building and Deployment: NPM Scripts 2"> <img loading="lazy" class="alignnone size-full wp-image-1281" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/bootstrap_fullstack_week4_10.jpg" alt="bootstrap fullstack week4 10" width="1035" height="426" srcset="https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_10.jpg 1035w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_10-300x123.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_10-1024x421.jpg 1024w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_10-768x316.jpg 768w" sizes="(max-width: 1035px) 100vw, 1035px" title="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building and Deployment: NPM Scripts 3"></p>
+<p>First, from your bash shell inside your project folder, install the NPM package&nbsp;<b>onchange</b><b>&nbsp;</b>as a dev-dependency:&nbsp; <span style="color: #ff6600;">&nbsp;<strong>npm install –save-dev onchange@7.0.0</strong></span></p>
+<p>Then install the package&nbsp;<b>parallelshell</b>&nbsp;with the following command, including the&nbsp;<b>-E</b>&nbsp;flag. The -E flag lets npm know that we want to install parallelshell at the exact 3.0.1 version this time and all times in the future. This is important here because the 3.0.2 version of parallelshell contains a bug that we wish to avoid.</p>
+<div class="editor-indent">
+<pre><strong><span style="color: #ff6600;">npm install --save-dev -E parallelshell@3.0.1</span></strong></pre>
+</div>
+<p>Add the following two scripts to the script object in&nbsp;<b>package.json</b>. The syntax will be slightly different based on your operating system:</p>
+<p><b>macOS:</b></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span>
+    <span class="token string">"watch:scss"</span><span class="token punctuation">:</span> <span class="token string">"onchange 'css/*.scss' -- npm run scss"</span><span class="token punctuation">,</span>
+    <span class="token string">"watch:all"</span><span class="token punctuation">:</span> <span class="token string">"parallelshell 'npm run watch:scss' 'npm run lite'"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span></code></pre>
+</div>
+</div>
+<div class="editor-indent"><b>Windows:</b></div>
+<div class="editor-indent">
+<div class="editor-indent">
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span>
+   <span class="token string">"watch:scss"</span><span class="token punctuation">:</span> <span class="token string">"onchange \"css/*.scss\" -- npm run scss"</span><span class="token punctuation">,</span>
+    <span class="token string">"watch:all"</span><span class="token punctuation">:</span> <span class="token string">"parallelshell \"npm run watch:scss\" \"npm run lite\""</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.
+
+</span></code>package.json</pre>
+<div>
+<div><span style="color: #0000ff;">“scripts”:&nbsp;{</span></div>
+<div><span style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;“lite”:&nbsp;“lite-server”,</span></div>
+<div><span style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;“scss”:&nbsp;“node-sass&nbsp;-o&nbsp;css/&nbsp;css/”,</span></div>
+<div><span style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ff6600;">“start”: “npm run watch:all”,</span></span></div>
+<div><span style="color: #0000ff;">&nbsp;&nbsp;&nbsp;&nbsp;“test”: “echo \”Error: no test specified\” &amp;&amp; exit 1″,&nbsp;</span></div>
+<div><span style="color: #0000ff;">&nbsp;&nbsp;&nbsp;<span style="color: #ff6600;"> “watch:scss”: “onchange \”css/*.scss\” — npm run scss”,&nbsp; &nbsp; <span style="color: #ff0000;">(the unchanged utility, will pay attention to any changes to any scss files that are in the CSS directory. Any change will run npm run scss)</span></span></span></div>
+<div><span style="color: #ff6600;">&nbsp;&nbsp;&nbsp;&nbsp;“watch:all”: “parallelshell \”npm run watch:scss\” \”npm run lite\””&nbsp; <span style="color: #ff0000;">&nbsp;(This will run both the watch scss script and lite server at the same time)</span></span></div>
+<div><span style="color: #0000ff;">&nbsp;&nbsp;},</span></div>
+</div>
+<pre><img loading="lazy" class="alignnone size-full wp-image-1303" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/bootstrap_fullstack_week4_11.jpg" alt="bootstrap fullstack week4 11" width="1080" height="642" srcset="https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_11.jpg 1080w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_11-300x178.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_11-1024x609.jpg 1024w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_11-768x457.jpg 768w" sizes="(max-width: 1080px) 100vw, 1080px" title="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building and Deployment: NPM Scripts 4">
+
+</pre>
+</div>
+</div>
+<div class="editor-indent"><b>*** Make sure that you add a comma to the end of the line above these lines.***&nbsp;</b>There should be a comma between each script in the scripts object, except the final one.</div>
+<ul>
+<li>Update the start script as follows:&nbsp; &nbsp; <strong style="color: #ff6600; font-family: Consolas, Monaco, monospace;">“start”: “npm run watch:all”,</strong></li>
+</ul>
+<ul>
+<li>Then, type the following at the prompt to start watching for changes to the Sass file, compile it to CSS, and run the lite server:&nbsp; &nbsp;<strong><span style="color: #ff6600;">npm start</span></strong></li>
+</ul>
+<ul>
+<li>Now, whenever you make any changes to<b>&nbsp;styles.scss</b>&nbsp;file, it will automatically be compiled to the corresponding .css file.</li>
+<li>You can test this by making a small change to your styles.scss file, and you’ll be able to see the recompilation happen in real time.</li>
+</ul>
+<hr>
+<h2><span style="color: #0000ff;">NPM Scripts – Part 2</span></h2>
+<ul id="yui_3_17_2_1_1612215801681_51">
+<li>Automate the process of building a distribution folder by writing NPM scripts, including:
+<ul>
+<li>Storing copies of all Font-Awesome icon files</li>
+<li>Compress or minify images</li>
+<li>Minify and uglify code files</li>
+<li>Clean up the distribution folder</li>
+<li>Generate the distribution files with an NPM command</li>
+</ul>
+</li>
+</ul>
+<p>Your project uses Font-Awesome fonts. These need to be copied to the distribution folder.:&nbsp; <span style="color: #ff6600;"><strong>npm install –save-dev copyfiles@2.2.0</strong></span></p>
+<p>Then add the following script in&nbsp;<b>package.json</b> within the scripts object:</p>
+<pre id="yui_3_17_2_1_1612215801681_63"><strong><span style="color: #ff6600;">"copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",</span></strong></pre>
+<p>You can assume that all scripts you are asked to add in this section will be added to the scripts object in <b>package.json</b>. The order that they are added in does not technically matter; you may choose to alphabetize them, or order them by type, or not concern yourself with an order at all. Just make sure that they all have a comma at the end of each script, except for the final one.</p>
+<h4>Compress and Minify Images</h4>
+<p>We will use the&nbsp;<b>imagemin-cli</b> NPM module to compress images to a smaller size without loss of quality. Install the module as follows:&nbsp; <span style="color: #ff6600;"><strong>&nbsp;npm install –save-dev imagemin-cli@5.1.0</strong></span></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<p>Then add the following script:</p>
+</div>
+</div>
+<div>
+<div>
+<pre><strong><span style="color: #ff6600;">   "imagemin": "imagemin img/* -o dist/img",</span></strong></pre>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4>Concatenate, minify, and uglify</h4>
+<p>Install the&nbsp;<b>usemin-cli&nbsp;</b>npm module as below:&nbsp; <strong><span style="color: #ff6600;">&nbsp;npm install –save-dev usemin-cli@0.6.0</span></strong></p>
+<p>This module will automatically install the&nbsp;<b>usemin</b>&nbsp;module, and the usemin module will automatically install a CSS minifier module named&nbsp;<b>clean-css</b>, a JavaScript minifier and uglifier module named&nbsp;<b>uglify-j</b><b>s</b>, and an HTML minification module named&nbsp;<b>html-minifier</b>.</p>
+<p>Add the following script below. It will tell usemin to process the HTML files specified, and it will automatically also run the CSS and JavaScript minifying and uglifying processes on any linked .css/.js files:</p>
+<div>
+<pre><strong><span style="color: #ff6600;">"usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html &amp;&amp; usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html &amp;&amp; usemin index.html -d dist --htmlmin -o dist/index.html",
+</span></strong></pre>
+</div>
+<p><img loading="lazy" class="alignnone size-full wp-image-1307" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/bootstrap_fullstack_week4_12-1.jpg" alt="bootstrap fullstack week4 12 1" width="1749" height="814" srcset="https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_12-1.jpg 1749w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_12-1-300x140.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_12-1-1024x477.jpg 1024w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_12-1-768x357.jpg 768w, https://cs360studio.com/wp-content/uploads/2021/02/bootstrap_fullstack_week4_12-1-1536x715.jpg 1536w" sizes="(max-width: 1749px) 100vw, 1749px" title="Bootcamp Notes - Day 11 (Tues) - Bootstrap: Building and Deployment: NPM Scripts 5"></p>
+<p>Now open&nbsp;<b>index.html</b>&nbsp;and surround all the css links code in the &lt;head&gt; as follows, with the&nbsp;<b>build:css</b>&nbsp;and&nbsp;<b>endbuild</b>&nbsp;comments:</p>
+<div>
+<pre><strong><span style="color: #0000ff;"><span style="color: #ff0000;">
+    &lt;!-- build:css css/main.css --&gt;</span>
+    &lt;link&nbsp;rel="stylesheet"&nbsp;href="node_modules/bootstrap/dist/css/bootstrap.min.css"&nbsp;/&gt;
+    &lt;link&nbsp;rel="stylesheet"&nbsp;href="node_modules/font-awesome/css/font-awesome.min.css"&nbsp;/&gt;
+    &lt;link&nbsp;rel="stylesheet"&nbsp;href="node_modules/bootstrap-social/bootstrap-social.css"&nbsp;/&gt;
+    &lt;link&nbsp;rel="stylesheet"&nbsp;href="css/styles.css"&nbsp;/&gt;
+  <span style="color: #ff0000;">  &lt;!-- endbuild --&gt;</span>
+    &lt;link&nbsp;rel="stylesheet"&nbsp;href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"&nbsp;/&gt;</span></strong>
+</pre>
+</div>
+<ul>
+<li>Notice that we’ve pulled the Google fonts list out to after the endbuild comment, since it’s not a local file.</li>
+<li>Do the same in&nbsp;<b>aboutus.html&nbsp;</b>and<b>&nbsp;</b><b>contactus.html</b>.</li>
+<li>Similarly, open&nbsp;<b>index.html</b>&nbsp;and surround the js script code as follows:</li>
+</ul>
+<div>
+<pre><strong><span style="color: #0000ff;">
+    &lt;!-- build:js js/main.js --&gt;
+    &lt;script&nbsp;src="node_modules/jquery/dist/jquery.slim.min.js"&gt;&lt;/script&gt;
+    &lt;script&nbsp;src="node_modules/popper.js/dist/umd/popper.min.js"&gt;&lt;/script&gt;
+    &lt;script&nbsp;src="node_modules/bootstrap/dist/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script&nbsp;src="js/scripts.js"&gt;&lt;/script&gt;
+    &lt;!-- endbuild --&gt;
+</span></strong></pre>
+</div>
+<ul>
+<li>Add this change to<b>&nbsp;</b>aboutus.html<b>&nbsp;</b>and<b>&nbsp;</b>contactus.html&nbsp;as well.</li>
+</ul>
+<h4>Automate Dist Folder Cleanup</h4>
+<p>Install the&nbsp;<b>rimraf&nbsp;</b>npm module by typing the following at the prompt::&nbsp; &nbsp; <strong><span style="color: #ff6600;">npm install –save-dev rimraf@3.0.2</span></strong></p>
+<div class="editor-indent">
+<p>Then, set up the following script:</p>
+</div>
+<p><span style="color: #ff6600;"><strong><span style="font-family: Consolas, Monaco, monospace;">“clean”</span><span style="font-family: Consolas, Monaco, monospace;">:</span> <span style="font-family: Consolas, Monaco, monospace;">“rimraf dist”</span><span style="font-family: Consolas, Monaco, monospace;">,</span></strong></span></p>
+<div class="editor-indent">
+<p>This utility simply deletes the dist folder, if it exists, and all files in it, effectively “cleaning” it.</p>
+</div>
+<h4>Build the distribution folder</h4>
+<p>Also add this script, which strings together commands to run a folder cleaning utility (which we’ll add later), to run the copyfonts script, and to run the usemin script.</p>
+<div class="editor-indent">
+<p><strong><span style="color: #ff6600;"><span style="font-family: Consolas, Monaco, monospace;">“build”</span><span style="font-family: Consolas, Monaco, monospace;">:</span> <span style="font-family: Consolas, Monaco, monospace;">“npm run clean &amp;&amp; npm run imagemin &amp;&amp; npm run copyfonts &amp;&amp; npm run usemin”</span><span style="font-family: Consolas, Monaco, monospace;">,</span></span></strong></p>
+<div>
+<pre><span style="font-family: Roboto, sans-serif;">Finally, to build the distribution folder, type the following at the prompt:    </span><span style="color: #ff6600;"><strong>npm run build</strong></span></pre>
+</div>
+</div>
+<ul id="yui_3_17_2_1_1612215801681_96">
+<li>This will create the&nbsp;<b>dist</b>&nbsp;folder containing the files that are a self-contained version of your project.</li>
+<li>Take a moment to look around the contents of the dist folder and see what’s inside. Especially notice that all your local CSS and JavaScript files have been merged into a single file, and if you look inside them, you can see that they have been optimized for deployment.</li>
+<li>If you have a web server that hosts your website, you can now copy the contents of this folder to it and view your work online.</li>
+</ul>
+<p>Note: There are many different workflows to ready your files for deployment. This is only one of them, so do not take it as canonical. In the real world, you will run into other methods such as using the module bundler&nbsp;<a href="https://webpack.js.org/" target="_blank" rel="noopener">Webpack</a>, or task runners such as&nbsp;<a href="https://gruntjs.com/" target="_blank" rel="noopener">Grunt&nbsp;</a>and&nbsp;<a href="https://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>.</p>
+<h4>Git</h4>
+<p>Open your&nbsp;<b>.gitignore</b>&nbsp;file in your editor and update it so that it reads as follows, preventing the “dist” folder from being added to the git repository:</p>
+<div id="yui_3_17_2_1_1612215801681_112">
+<div id="yui_3_17_2_1_1612215801681_111">
+<div>
+<div>
+<div>
+<div>
+<div><strong><span style="color: #ff6600;">node_modules </span></strong></div>
+<div><strong><span style="color: #ff6600;">dist</span></strong></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Commit all the changes to your local repository and then push.</p>
+<p><a href="https://www.cs360studio.com/nucampprojects/nucampsite/index.html" target="_blank" rel="noopener">To see the Nucamp campsite working live on a web server go here to see it!</a></p>
+<p><a href="https://www.cs360studio.com/nucampprojects/aquaflowplumbing/index.html" target="_blank" rel="noopener">To see my Nucamp portfolio project go here to see!</a></p>
+<p>If you have a web server like hostgator or something. You can use an FTP like Filezilla and upload the contents of your <strong><span style="color: #ff6600;">dis</span></strong>t folder like I did.</p>
+<hr>
+<h2><span style="color: #0000ff;">NPM Scripts – Part 3</span></h2>
+<h3>Instructions (Deploy your simple bootstrap site)</h3>
+<h4>Prepare your files</h4>
+<p>To implement the site yourself,&nbsp; first download and unzip this folder to your computer (it can be anywhere, such as in the NucampFolder): <a style="font-family: Consolas, Monaco, monospace;" href="https://learn.nucamp.co/pluginfile.php/19790/mod_book/chapter/4586/ssss-bootstrap.zip" target="_blank" rel="noopener">ssss-bootstrap.zip</a></p>
+<p><b>F</b><b>rom inside the ssss-bootstrap folder</b> in a terminal, enter:&nbsp; &nbsp;<span style="color: #ff6600;"><strong> <span style="font-family: Consolas, Monaco, monospace;">npm install</span></strong></span></p>
+<div class="editor-indent">
+<p>This command will generate the node_modules folder for this project.</p>
+</div>
+<p>Next, generate the&nbsp;<b>dist&nbsp;</b>folder:&nbsp; <span style="color: #ff6600;"><strong><span style="font-family: Consolas, Monaco, monospace;">npm run build</span></strong></span></p>
+<div class="editor-indent">
+<p>This should create a folder named <b></b><b>dist&nbsp;</b>inside your&nbsp;<b>ssss-bootstrap&nbsp;</b>folder.</p>
+</div>
+<p>Note: This project does not include use of custom Sass, so it excludes node-sass, parallelshell, and onchange dependencies.</p>
+<h4>Deploy to Netlify</h4>
+<ul>
+<li>Create or login to&nbsp;<a href="http://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>&nbsp;and go to the&nbsp;<b>Sites&nbsp;</b>tab.</li>
+<li>Drag and drop the&nbsp;<b>dist&nbsp;</b>folder into where it says “Drag and drop your&nbsp;site&nbsp;folder&nbsp;here”.</li>
+<li>You’re done! Click on the link generated to see it.</li>
+<li>Netlify will automatically generate a random subdomain for your site, such as&nbsp;<a href="https://blissful-sammet-e1a278.netlify.app/" target="_blank" rel="noopener noreferrer">https://blissful-sammet-e1a278.netlify.app</a>&nbsp;— you can change this by clicking “Site Settings” then “Change Site Name”.</li>
+</ul>
+<h4>Manual deployment vs. continuous deployment</h4>
+<ul>
+<li>This example showed a basic approach using drag-and-drop manual deployment of a pre-generated dist folder to a Netlify server.</li>
+<li>If you update a site locally then wish to update it on Netlify, you can manually deploy once again by running&nbsp;<b>npm run build&nbsp;</b>then drag-and-dropping the new&nbsp;<b>dist&nbsp;</b>folder&nbsp;in the “Deploys” tab for your site on Netlify.</li>
+<li>Netlify also offers what’s called a continuous deployment option that you can automate to retrieve your source code from Github and build it for you on their server. You may wish to explore this option on your own. See the link in the Additional Resources.</li>
+</ul>
+<h3>Netlify vs. Other Platforms</h3>
+<ul>
+<li>Netlify is far from the only cloud platform that can host your Bootstrap site, but it does offer what is possibly the easiest deployment option. It may not be suitable for all of your projects. Others you may wish to research are&nbsp;<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>,&nbsp;<a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>,&nbsp;<a href="https://www.heroku.com/" target="_blank" rel="noopener">Heroku</a>,&nbsp;<a href="https://aws.amazon.com/" target="_blank" rel="noopener">AWS</a>,&nbsp;<a href="https://www.digitalocean.com/" target="_blank" rel="noopener">DigitalOcean</a>,&nbsp;<a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a>, and more. Each has its own unique instructions for setup and deployment, as well as set of features and supported technologies.</li>
+</ul>
+<hr>
+<p>Additional Resources:</p>
+<ul>
+<li><a href="http://www.css-class.com/what-is-minification/" target="_blank" rel="noopener">What Is Minification?</a></li>
+<li><a href="https://scotch.io/tutorials/using-npm-as-a-build-tool" target="_blank" rel="noopener">Using&nbsp; NPM As A Build Tool</a></li>
+<li><a href="https://css-tricks.com/deployment/" target="_blank" rel="noopener">CSS-Tricks: Website Deployment – Let Us Count The Ways</a></li>
+<li>W3Schools –&nbsp;<a href="https://www.w3schools.com/tags/att_script_src.asp" target="_blank" rel="noopener">HTML &lt;script&gt; src attribute</a></li>
+<li><a href="https://www.npmjs.com/package/parallelshell" target="_blank" rel="noopener">NPM parallelshell module</a></li>
+<li><a href="https://www.npmjs.com/package/onchange" target="_blank" rel="noopener">NPM onchange module</a></li>
+<li><a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="noopener">NPM scripts</a></li>
+<li><a href="https://www.npmjs.com/package/copyfiles" target="_blank" rel="noopener">NPM – copyfiles</a></li>
+<li><a href="https://www.npmjs.com/package/imagemin-cli" target="_blank" rel="noopener">NPM – imagemin-cli</a></li>
+<li><a href="https://www.npmjs.com/package/usemin-cli" target="_blank" rel="noopener">NPM – usemin-cli</a></li>
+<li><a href="https://www.npmjs.com/package/uglify-js" target="_blank" rel="noopener">NPM – uglify-js</a></li>
+<li><a href="https://www.npmjs.com/package/clean-css" target="_blank" rel="noopener">NPM – clean-css</a></li>
+<li><a href="https://www.npmjs.com/package/html-minifier" target="_blank" rel="noopener">NPM – html-minifier</a></li>
+<li><a href="https://www.npmjs.com/package/rimraf" target="_blank" rel="noopener">NPM – rimraf</a></li>
+<li><a href="https://www.freecodecamp.org/news/making-sense-of-front-end-build-tools-3a1b3a87043b/" target="_blank" rel="noopener">Making Sense of Front End Build Tools</a></li>
+<li><a href="https://deliciousbrains.com/npm-build-script/" target="_blank" rel="noopener">Using NPM Build Scripts as a Build Tool</a></li>
+<li id="yui_3_17_2_1_1612230928655_58"><a id="yui_3_17_2_1_1612230928655_57" href="https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git" target="_blank" rel="noopener">Netlify – Deploy with Git</a></li>
+</ul>
+<div class="code-block code-block-7" style="margin: 8px 8px 8px 0; float: left;">
+<a href="https://b3b4613rfw3p2w1gioz4y9xd6a.hop.clickbank.net/" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/2.png"></a></div>
+<!-- AI CONTENT END 1 -->
+	</div><!-- .entry-content -->
+
+	<div class="entry-tags">
+
+		<span class="tag-links"> <a href="https://cs360studio.com/tag/npm-scripts/" rel="tag">NPM Scripts</a></span>			
+			</div><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+	
+<div class="entry-footer">
+
+	<div class="share-icons">
+		
+		<span class="entry-share clear">
+
+	<a class="twitter social-twitter" href="https://twitter.com/intent/tweet?text=Bootcamp+Notes+%26%238211%3B+Day+11+%28Tues%29+%26%238211%3B+Bootstrap%3A+Building+and+Deployment%3A+NPM+Scripts&amp;url=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/icon-twitter-white.png" alt="Twitter"><span>Tweet on Twitter</span></a>
+
+	<a class="facebook social-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/icon-facebook-white.png" alt="Facebook"><span>Share on Facebook</span></a>
+
+	<a class="pinterest social-pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fcs360studio.com%2F2021%2F02%2Fbootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts%2F&amp;media=https%3A%2F%2Fcs360studio.com%2Fwp-content%2Fuploads%2F2021%2F02%2F20190815_134536.jpg" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/icon-pinterest-white.png" alt="Pinterest"><span>Pinterest</span></a>
+
+</span><!-- .entry-share -->
+
+	</div><!-- .share-icons -->
+
+</div><!-- .entry-footer -->
+
+
+
+		<div class="entry-related clear">
+			<h3>You May Also Like</h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="https://cs360studio.com/2022/03/we-built-the-home-of-the-future-with-grant-imahara/">
+								<div class="thumbnail-wrap">
+									<img width="796" height="445" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646796193_maxresdefault-796x445.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="1646796193 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646796193_maxresdefault-796x445.jpg 796w, https://cs360studio.com/wp-content/uploads/2022/03/1646796193_maxresdefault-300x169.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646796193_maxresdefault-383x214.jpg 383w" sizes="(max-width: 796px) 100vw, 796px" title="We built the Home of the Future with Grant Imahara 7">								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://cs360studio.com/2022/03/we-built-the-home-of-the-future-with-grant-imahara/">We built the Home of the Future with Grant Imahara</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry">
+													<a class="thumbnail-link" href="https://cs360studio.com/2022/03/dell-business-desktop-computer-pc-core-i5-8gb-ram-128gb-ssd-windows-10-pro-wi-fi/">
+								<div class="thumbnail-wrap">
+									<img width="796" height="445" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646795316_s-l1600-796x445.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="1646795316 s l1600" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600-796x445.jpg 796w, https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600-383x214.jpg 383w" sizes="(max-width: 796px) 100vw, 796px" title="Dell Business Desktop Computer PC Core i5 8GB RAM 128GB SSD Windows 10 Pro Wi-Fi 9">								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://cs360studio.com/2022/03/dell-business-desktop-computer-pc-core-i5-8gb-ram-128gb-ssd-windows-10-pro-wi-fi/">Dell Business Desktop Computer PC Core i5 8GB RAM 128GB SSD Windows 10 Pro Wi-Fi</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="https://cs360studio.com/2022/03/meta-glasses-are-the-future-of-computing/">
+								<div class="thumbnail-wrap">
+									<img width="796" height="445" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646795239_maxresdefault-796x445.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="1646795239 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646795239_maxresdefault-796x445.jpg 796w, https://cs360studio.com/wp-content/uploads/2022/03/1646795239_maxresdefault-300x169.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646795239_maxresdefault-383x214.jpg 383w" sizes="(max-width: 796px) 100vw, 796px" title="Meta Glasses are the future of computing 11">								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://cs360studio.com/2022/03/meta-glasses-are-the-future-of-computing/">Meta Glasses are the future of computing</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry">
+													<a class="thumbnail-link" href="https://cs360studio.com/2022/03/fwd-mega-bundle/">
+								<div class="thumbnail-wrap">
+									<img width="590" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/mb-preview-image.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="mb preview image" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/mb-preview-image.jpg 590w, https://cs360studio.com/wp-content/uploads/2022/03/mb-preview-image-300x153.jpg 300w" sizes="(max-width: 590px) 100vw, 590px" title="FWD Mega Bundle 13">								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://cs360studio.com/2022/03/fwd-mega-bundle/">FWD Mega Bundle</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry">
+													<a class="thumbnail-link" href="https://cs360studio.com/2022/03/bootstrap-5-crash-course-website-build-deploy-2/">
+								<div class="thumbnail-wrap">
+									<img width="796" height="445" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646784090_maxresdefault-796x445.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="1646784090 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646784090_maxresdefault-796x445.jpg 796w, https://cs360studio.com/wp-content/uploads/2022/03/1646784090_maxresdefault-300x169.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646784090_maxresdefault-383x214.jpg 383w" sizes="(max-width: 796px) 100vw, 796px" title="Bootstrap 5 Crash Course | Website Build &amp; Deploy 15">								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://cs360studio.com/2022/03/bootstrap-5-crash-course-website-build-deploy-2/">Bootstrap 5 Crash Course | Website Build &amp; Deploy</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="https://cs360studio.com/2022/03/unbelievable-what-banks-are-doing-with-gold-silver-now-2022-predictions/">
+								<div class="thumbnail-wrap">
+									<img width="796" height="445" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646783087_maxresdefault-796x445.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="1646783087 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646783087_maxresdefault-796x445.jpg 796w, https://cs360studio.com/wp-content/uploads/2022/03/1646783087_maxresdefault-300x169.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646783087_maxresdefault-383x214.jpg 383w" sizes="(max-width: 796px) 100vw, 796px" title="UNBELIEVABLE! What Banks Are Doing With Gold &amp; Silver Now! + 2022 Predictions 17">								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://cs360studio.com/2022/03/unbelievable-what-banks-are-doing-with-gold-silver-now-2022-predictions/">UNBELIEVABLE! What Banks Are Doing With Gold &amp; Silver Now! + 2022 Predictions</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area sidebar">
+	
+	<div id="ccpw_widget-3" class="widget ccpw_widget"><h2 class="widget-title">Crypto Currency</h2><!-- Cryptocurrency Widgets - Version:- 2.4 By Cool Plugins (CoolPlugins.net) --><div id="ccpw-list-widget-7452" class="ccpw-widget"><table class="ccpw_table" style="border:none!important;"><thead>
+            <tr><th>Name</th>
+            <th>Price</th><th>24H (%)</th></tr></thead><tbody><tr id="ticoex-token"><td><div class="ccpw_icon ccpw_coin_logo"><img alt="TICOEX Token" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/aCjvaXZu_400x400.jpg"></div><div class="ccpw_coin_info">
+  				<span class="name">TICOEX Token</span>
+  				<span class="coin_symbol">(TICO)</span>
+  				</div></td><td class="price"><div class="price-value">$0.001366</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>0.64%</span></td></tr><tr id="bitcoin"><td><div class="ccpw_icon ccpw_coin_logo"><img id="bitcoin" alt="bitcoin" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/bitcoin.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">Bitcoin</span>
+  				<span class="coin_symbol">(BTC)</span>
+  				</div></td><td class="price"><div class="price-value">$42,359.00</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>9.34%</span></td></tr><tr id="ethereum"><td><div class="ccpw_icon ccpw_coin_logo"><img id="ethereum" alt="ethereum" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/ethereum.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">Ethereum</span>
+  				<span class="coin_symbol">(ETH)</span>
+  				</div></td><td class="price"><div class="price-value">$2,747.44</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>6.79%</span></td></tr><tr id="tether"><td><div class="ccpw_icon ccpw_coin_logo"><img id="tether" alt="tether" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/tether.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">Tether</span>
+  				<span class="coin_symbol">(USDT)</span>
+  				</div></td><td class="price"><div class="price-value">$1.00</div>
+  				</td><td><span class="changes down"><i class="ccpw_icon-down" aria-hidden="true"></i>-0.03%</span></td></tr><tr id="binancecoin"><td><div class="ccpw_icon ccpw_coin_logo"><img id="binancecoin" alt="binancecoin" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/binancecoin.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">BNB</span>
+  				<span class="coin_symbol">(BNB)</span>
+  				</div></td><td class="price"><div class="price-value">$395.43</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>3.13%</span></td></tr><tr id="usd-coin"><td><div class="ccpw_icon ccpw_coin_logo"><img id="usd-coin" alt="usd-coin" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/usd-coin.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">USD Coin</span>
+  				<span class="coin_symbol">(USDC)</span>
+  				</div></td><td class="price"><div class="price-value">$1.00</div>
+  				</td><td><span class="changes down"><i class="ccpw_icon-down" aria-hidden="true"></i>-0.06%</span></td></tr><tr id="ripple"><td><div class="ccpw_icon ccpw_coin_logo"><img id="ripple" alt="ripple" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/ripple.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">XRP</span>
+  				<span class="coin_symbol">(XRP)</span>
+  				</div></td><td class="price"><div class="price-value">$0.77</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>5.99%</span></td></tr><tr id="terra-luna"><td><div class="ccpw_icon ccpw_coin_logo"><img alt="Terra" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/luna1557227471663.png"></div><div class="ccpw_coin_info">
+  				<span class="name">Terra</span>
+  				<span class="coin_symbol">(LUNA)</span>
+  				</div></td><td class="price"><div class="price-value">$100.98</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>22.32%</span></td></tr><tr id="solana"><td><div class="ccpw_icon ccpw_coin_logo"><img alt="Solana" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/solana.png"></div><div class="ccpw_coin_info">
+  				<span class="name">Solana</span>
+  				<span class="coin_symbol">(SOL)</span>
+  				</div></td><td class="price"><div class="price-value">$88.47</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>6.92%</span></td></tr><tr id="cardano"><td><div class="ccpw_icon ccpw_coin_logo"><img id="cardano" alt="cardano" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/cardano.svg"></div><div class="ccpw_coin_info">
+  				<span class="name">Cardano</span>
+  				<span class="coin_symbol">(ADA)</span>
+  				</div></td><td class="price"><div class="price-value">$0.86</div>
+  				</td><td><span class="changes up"><i class="ccpw_icon-up" aria-hidden="true"></i>6.95%</span></td></tr></tbody></table></div></div><div id="block-5" class="widget widget_block widget_media_image">
+<figure class="wp-block-image size-full"><a href="https://cs360studio.com/jesus-speaks/" rel="https://cs360studio.com/jesus-speaks/ "><img loading="lazy" width="638" height="638" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/JS_logo_v2_with_Jesus.jpg" alt="" class="wp-image-4549" srcset="https://cs360studio.com/wp-content/uploads/2021/12/JS_logo_v2_with_Jesus.jpg 638w, https://cs360studio.com/wp-content/uploads/2021/12/JS_logo_v2_with_Jesus-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/12/JS_logo_v2_with_Jesus-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/12/JS_logo_v2_with_Jesus-80x80.jpg 80w" sizes="(max-width: 638px) 100vw, 638px"></a></figure>
+</div><div id="happythemes-ad-13" class="widget widget_ad ad-widget"><h2 class="widget-title">Traffic Zion</h2><div class="adwidget"><a href="https://307ca542el3scx14s94v0r1teo.hop.clickbank.net/" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/trafficzion.jpg"></a></div></div>			<div id="wp_subscribe-2" class="widget wp_subscribe">	
+		<div id="wp-subscribe" class="wp-subscribe-wrap wp-subscribe wp-subscribe-1" data-thanks_page="0" data-thanks_page_url="" data-thanks_page_new_window="0">
+
+			<h4 class="title">Subscribe to CS360Studio.COM!</h4>
+
+			<p class="text">Subscribe to our mailing list and get interesting stuff and updates to your email inbox.</p>
+
+			
+		<form action="https://feedburner.google.com/fb/a/mailverify?uri=Cs360studiocom" method="post" class="wp-subscribe-form wp-subscribe-feedburner" id="wp-subscribe-form-1" target="popupwindow">
+
+			<input class="regular-text email-field" type="email" name="email" placeholder="Enter your email here" required="">
+
+			<input type="hidden" name="uri" value="Cs360studiocom">
+
+			<input type="hidden" name="loc" value="en_US">
+
+			<input type="hidden" name="form_type" value="widget">
+
+			<input type="hidden" name="service" value="feedburner">
+
+			<input type="hidden" name="widget" value="wp_subscribe-2">
+							<div class="wps-consent-wrapper">
+					<label for="consent-field">
+						<input class="consent-field" id="consent-field" type="checkbox" name="consent" required="">
+						I consent to my submitted data being collected via this form*					</label>
+				</div>
+						<input class="submit" type="submit" name="submit" value="Sign Up Now">
+
+		</form>
+
+		
+			<div class="wp-subscribe-loader">
+				<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+					<path fill="#ffffff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+						<animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform>
+					</path>
+				</svg>
+			</div>
+
+			<p class="thanks">Thank you for subscribing.</p>
+			<p class="error">Something went wrong.</p>
+			<div class="clear"></div>
+
+			<p class="footer-text">we respect your privacy and take protecting it seriously</p>
+
+		</div>
+
+			</div>	
+<div id="flag-images-2" class="widget flag_images"><h2 class="widget-title">Free Stock Photos by CS</h2>
+<div class="flag-widget">
+<div class="flagallery albumnavigator_skin" id="FlaGallery_sc1_2"><script type="application/json" class="FlaGallery_sc1_2">{"settings":{"splashType":"masonry","coverRecomendedWidth":"250","cover\u0421olumns":"6","coverThumbSpacing":"10","coverHieghtRation":"1","coverHoverColor":"rgba(0, 0, 0, 0.65)","coverTitleEnable":"1","coverTitleFontSize":"28","coverTitleTextColor":"rgba(255,255,255,1)","coverCollectoinAmount":"1","sliderPpointsNaviEnable":"1","sliderButtonsNaviEnable":"1","navigationColor":"rgba(0,0,0,1)","navigationColorHover":"rgba(0,0,0,0.7)","navigationIconColor":"rgba(255,255,255,1)","collectionThumbSquareMode":"square","collectionBgColor":"rgb(0, 0, 0)","collectionHeaderBgColor":"rgb(0, 92, 185)","collectionHeaderTextColor":"rgb(255, 255, 255)","collectionHeaderControllIconColor":"rgba(75,75,75,1)","collectionHeaderControllBgColor":"rgba(0,0,0,0)","collectionDescription":"1","collectionThumbRecomendedHeight":"250","collectionThumbInPadding":"6","collectionthumbHoverBgColor":"rgba(0,0,0,0.5)","collectionThumbTitleShow":"1","collectionThumbFontSize":"20","collectionThumbTitleColor":"rgba(255,255,255,1)","lightBoxEnable":"1","collectionThumbSubMenuVisibility":"1","collectionInfoEnable":"1","collectionItemDownload":"1","collectionSocialShareEnabled":"1","collectionLikesEnabled":"1","collectionThumbSubMenuBackgroundColor":"rgba(0,0,0,0)","collectionThumbSubMenuBackgroundColorOver":"rgba(255,255,255,1)","collectionThumbSubMenuIconColor":"rgba(255,255,255,1)","collectionThumbSubMenuIconHoverColor":"rgba(0,0,0,1)","modaBgColor":"rgba(0,0,0,0.9)","modalInfoBoxBgColor":"rgba(255,255,255,1)","modalInfoBoxTitleTextColor":"rgba(0,0,0,1)","modalInfoBoxTextColor":"rgba(70,70,70,1)","infoBarExifEnable":"1","infoBarCountersEnable":"1","infoBarDateInfoEnable":"1","copyR_Protection":"1","copyR_Alert":"Feel free to download and use this photo for free. Attribution is not required. ","sliderScrollNavi":"0","sliderNextPrevAnimation":"animation","sliderPreloaderColor":"#ffffff","sliderBgColor":"rgba(0,0,0,0.8)","sliderHeaderFooterBgColor":"#000000","sliderNavigationColor":"rgba(0,0,0,1)","sliderNavigationIconColor":"rgba(255,255,255,1)","sliderNavigationColorOver":"rgba(255,255,255,1)","sliderNavigationIconColorOver":"rgba(0,0,0,1)","sliderItemTitleEnable":"1","sliderItemTitleFontSize":"24","sliderItemTitleTextColor":"#ffffff","sliderThumbBarEnable":"1","sliderThumbBarHoverColor":"#ffffff","sliderThumbSubMenuBackgroundColor":"rgba(0,0,0,1)","sliderThumbSubMenuBackgroundColorOver":"rgba(255,255,255,1)","sliderThumbSubMenuIconColor":"rgba(255,255,255,1)","sliderThumbSubMenuIconHoverColor":"rgba(0,0,0,1)","sliderPlayButton":"1","slideshowDelay":"8","slideshowProgressBarColor":"rgba(255,255,255,1)","slideshowProgressBarBGColor":"rgba(255,255,255,0.6)","sliderInfoEnable":"1","sliderZoomButton":"1","sliderItemDownload":"1","sliderSocialShareEnabled":"1","sliderLikesEnabled":"1","sliderFullScreen":"1","customCSS":"","key":"9af21ebc90df7ded485973becc21233e","name":"GRANDPackPlus","galleryID":"sc1_2","post_url":"https:\/\/cs360studio.com\/2021\/02\/bootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts","module_url":"https:\/\/cs360studio.com\/wp-content\/plugins\/flagallery-skins\/albumnavigator\/"}, "data":[{"gallery":{"gid":"2","name":"scenery-1","path":"https:\/\/cs360studio.com\/wp-content\/flagallery\/scenery-1","title":"Beach","galdesc":"The best free stock photos by the talented CS."},"data":[{"pid":"9","filename":"20210327_070703.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:07:03","hitcounter":"7","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:07 am","copyright":false,"focal_length":"7 mm","iso":80,"shutter_speed":"1\/120 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"10","filename":"20210327_072627.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:26:27","hitcounter":"5","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:26 am","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/740 sec","flash":false,"title":false,"keywords":false,"width":3000,"height":4000,"saved":true,"thumbnail":{"width":300,"height":400},"webview":{"0":1500,"1":2000,"2":2,"3":"width=\"1500\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"11","filename":"20210327_072619.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:26:19","hitcounter":"6","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:26 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/810 sec","flash":false,"title":false,"keywords":false,"width":3000,"height":4000,"saved":true,"thumbnail":{"width":300,"height":400},"webview":{"0":1500,"1":2000,"2":2,"3":"width=\"1500\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"12","filename":"20210327_072351.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:23:51","hitcounter":"6","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:23 am","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/410 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"13","filename":"20210327_072339.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:23:39","hitcounter":"6","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:23 am","copyright":false,"focal_length":"7 mm","iso":25,"shutter_speed":"1\/120 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"14","filename":"20210327_072335.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:23:35","hitcounter":"5","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:23 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/260 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"15","filename":"20210327_072029.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:20:29","hitcounter":"4","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:20 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/160 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"16","filename":"20210327_070714.jpg","description":"","alttext":"Beach sunrise at Daytona","link":"","imagedate":"2021-03-27 07:07:14","hitcounter":"4","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"March 27, 2021 7:07 am","copyright":false,"focal_length":"7 mm","iso":250,"shutter_speed":"1\/60 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"21","filename":"20210515_181534.jpg","description":"","alttext":"Space View Park","link":"","imagedate":"2021-05-15 18:15:34","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:15 pm","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/510 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"22","filename":"20210515_181545.jpg","description":"","alttext":"Space View Park","link":"","imagedate":"2021-05-15 18:15:45","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:15 pm","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/520 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"23","filename":"20210515_181545-lowres.jpg","description":"","alttext":"Space View Park","link":"","imagedate":"2021-05-15 18:15:45","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:15 pm","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/520 sec","flash":false,"title":false,"keywords":false,"width":600,"height":450,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":600,"1":450,"2":2,"3":"width=\"600\" height=\"450\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"24","filename":"20210515_181525.jpg","description":"","alttext":"Space View Park Beach","link":"","imagedate":"2021-05-15 18:15:25","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:15 pm","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/920 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"25","filename":"20210515_181516.jpg","description":"","alttext":"Space View Park Beach","link":"","imagedate":"2021-05-15 18:15:16","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:15 pm","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/870 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"26","filename":"20210515_181516-lowres.jpg","description":"","alttext":"Space View Park Beach","link":"","imagedate":"2021-05-15 18:15:16","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:15 pm","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/870 sec","flash":false,"title":false,"keywords":false,"width":600,"height":450,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":600,"1":450,"2":2,"3":"width=\"600\" height=\"450\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"27","filename":"20210515_181453.jpg","description":"","alttext":"Space View Park Beach","link":"","imagedate":"2021-05-15 18:14:53","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:14 pm","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/1150 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"28","filename":"20210515_181448.jpg","description":"","alttext":"Space View Park Beach","link":"","imagedate":"2021-05-15 18:14:48","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:14 pm","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/710 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"29","filename":"20210515_181441.jpg","description":"","alttext":"Space View Park","link":"","imagedate":"2021-05-15 18:14:41","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"May 15, 2021 6:14 pm","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/780 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"30","filename":"20210428_091315.jpg","description":"","alttext":"Palm trees","link":"","imagedate":"2021-04-28 09:13:15","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"April 28, 2021 9:13 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/580 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"31","filename":"20201011_171815.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2020-10-11 17:18:15","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"October 11, 2020 5:18 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/800 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"32","filename":"20200614_122147.jpg","description":"","alttext":"Open water ","link":"","imagedate":"2020-06-14 12:21:47","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"June 14, 2020 12:21 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2890 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"384","filename":"20210620_084807.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:48:07","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:48 am","copyright":false,"focal_length":"2.2 mm","iso":64,"shutter_speed":"1\/1240 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"385","filename":"20210620_084946.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:49:46","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:49 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/590 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"386","filename":"20210620_084952.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:49:52","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:49 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/590 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"387","filename":"20210620_085015.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:50:15","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 3","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:50 am","copyright":false,"focal_length":"14.2 mm","iso":25,"shutter_speed":"1\/370 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"388","filename":"20210620_085125.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:51:25","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:51 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/950 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"389","filename":"20210620_085127.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:51:28","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:51 am","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/950 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"390","filename":"20210620_085645.jpg","description":"","alttext":"Daytona Beach","link":"","imagedate":"2021-06-20 08:56:46","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"June 20, 2021 8:56 am","copyright":false,"focal_length":"2.2 mm","iso":64,"shutter_speed":"1\/1530 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"148","filename":"20201011_191411.jpg","description":"","alttext":"The Pier at Daytona Beach 1","link":"","imagedate":"2020-10-11 19:14:11","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"October 11, 2020 7:14 pm","copyright":false,"focal_length":"3.519 mm","iso":400,"shutter_speed":"1\/20 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2560,"1":1440,"2":2,"3":"width=\"2560\" height=\"1440\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"149","filename":"20201011_191416.jpg","description":"","alttext":"The Pier at Daytona Beach 2","link":"","imagedate":"2020-10-11 19:14:16","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"October 11, 2020 7:14 pm","copyright":false,"focal_length":"3.519 mm","iso":400,"shutter_speed":"1\/20 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2560,"1":1440,"2":2,"3":"width=\"2560\" height=\"1440\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"150","filename":"20201011_171723.jpg","description":"","alttext":"View of Daytona from Pier ","link":"","imagedate":"2020-10-11 17:17:23","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"October 11, 2020 5:17 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/920 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"151","filename":"20201011_171726.jpg","description":"","alttext":"View of Daytona from Pier ","link":"","imagedate":"2020-10-11 17:17:26","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"October 11, 2020 5:17 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/920 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"152","filename":"20201011_171815_0.jpg","description":"","alttext":"View of Daytona from Pier ","link":"","imagedate":"2020-10-11 17:18:15","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"October 11, 2020 5:18 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/800 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"153","filename":"20210419_163643.jpg","description":"","alttext":"The Pier at Daytona Beach 3","link":"","imagedate":"2021-04-19 16:36:43","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"April 19, 2021 4:36 pm","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/1820 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"154","filename":"20210419_163652.jpg","description":"","alttext":"The Sand of Daytona Beach","link":"","imagedate":"2021-04-19 16:36:52","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 1.8","credit":false,"camera":"SM-N986U","caption":false,"created_timestamp":"April 19, 2021 4:36 pm","copyright":false,"focal_length":"7 mm","iso":20,"shutter_speed":"1\/1870 sec","flash":false,"title":false,"keywords":false,"width":4000,"height":3000,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"199","filename":"20200502_172102.jpg","description":"","alttext":"Sandy Beach 1","link":"","imagedate":"2020-05-02 17:21:02","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"May 2, 2020 5:21 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2290 sec","flash":"Not fired","title":false,"keywords":false,"width":2880,"height":2160,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"200","filename":"20200502_172059.jpg","description":"","alttext":"Sandy Beach 2","link":"","imagedate":"2020-05-02 17:20:59","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"May 2, 2020 5:20 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2100 sec","flash":"Not fired","title":false,"keywords":false,"width":2880,"height":2160,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"201","filename":"20200502_172053.jpg","description":"","alttext":"Sandy Beach 3","link":"","imagedate":"2020-05-02 17:20:53","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"May 2, 2020 5:20 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2190 sec","flash":"Not fired","title":false,"keywords":false,"width":2880,"height":2160,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"202","filename":"20200502_170809.jpg","description":"","alttext":"Sandy Beach 4","link":"","imagedate":"2020-05-02 17:08:09","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"May 2, 2020 5:08 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2520 sec","flash":"Not fired","title":false,"keywords":false,"width":2880,"height":2160,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"203","filename":"20200614_121604.jpg","description":"","alttext":"Sandy Beach 5","link":"","imagedate":"2020-06-14 12:16:04","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"June 14, 2020 12:16 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/3260 sec","flash":"Not fired","title":false,"keywords":false,"width":2560,"height":1440,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"204","filename":"20200502_170807.jpg","description":"","alttext":"Sandy Beach 6","link":"","imagedate":"2020-05-02 17:08:06","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"May 2, 2020 5:08 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2580 sec","flash":"Not fired","title":false,"keywords":false,"width":2880,"height":2160,"saved":true,"thumbnail":{"width":400,"height":300},"webview":{"0":2000,"1":1500,"2":2,"3":"width=\"2000\" height=\"1500\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"205","filename":"20190814_140918.jpg","description":"","alttext":"Sandy California Beach 1","link":"","imagedate":"2019-08-14 14:09:18","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"August 14, 2019 2:09 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/2960 sec","flash":"Not fired","title":false,"keywords":false,"width":3120,"height":4160,"saved":true,"thumbnail":{"width":300,"height":400},"webview":{"0":1500,"1":2000,"2":2,"3":"width=\"1500\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"206","filename":"20190814_140915.jpg","description":"","alttext":"Sandy California Beach 2","link":"","imagedate":"2019-08-14 14:09:15","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.2","credit":false,"camera":"LM-Q710(FGN)","caption":false,"created_timestamp":"August 14, 2019 2:09 pm","copyright":false,"focal_length":"3.519 mm","iso":50,"shutter_speed":"1\/3050 sec","flash":"Not fired","title":false,"keywords":false,"width":3120,"height":4160,"saved":true,"thumbnail":{"width":300,"height":400},"webview":{"0":1500,"1":2000,"2":2,"3":"width=\"1500\" height=\"2000\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"207","filename":"20160428_134350.jpg","description":"","alttext":"Sandy California Beach 3","link":"","imagedate":"2016-04-28 13:43:50","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.4","credit":false,"camera":"LG-H631","caption":false,"created_timestamp":"April 28, 2016 1:43 pm","copyright":false,"focal_length":"3.97 mm","iso":50,"shutter_speed":"1\/2290 sec","flash":false,"title":false,"keywords":false,"width":4160,"height":2340,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"208","filename":"20160428_134343.jpg","description":"","alttext":"Sandy California Beach 4","link":"","imagedate":"2016-04-28 13:43:43","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.4","credit":false,"camera":"LG-H631","caption":false,"created_timestamp":"April 28, 2016 1:43 pm","copyright":false,"focal_length":"3.97 mm","iso":50,"shutter_speed":"1\/3010 sec","flash":false,"title":false,"keywords":false,"width":4160,"height":2340,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}},{"pid":"209","filename":"20160428_134357.jpg","description":"","alttext":"Sandy California Beach 5","link":"","imagedate":"2016-04-28 13:43:57","hitcounter":"0","total_value":"0","total_votes":"0","meta_data":{"aperture":"F 2.4","credit":false,"camera":"LG-H631","caption":false,"created_timestamp":"April 28, 2016 1:43 pm","copyright":false,"focal_length":"3.97 mm","iso":50,"shutter_speed":"1\/3700 sec","flash":false,"title":false,"keywords":false,"width":4160,"height":2340,"saved":true,"thumbnail":{"width":400,"height":225},"webview":{"0":2000,"1":1125,"2":2,"3":"width=\"2000\" height=\"1125\"","bits":8,"channels":3,"mime":"image\/jpeg"}}}]}]}</script><div class="fla-albumnavigator-splash-masonry"><div class="splash-column" style="width: 33.3333%;"><div class="fla-albumnavigator-cover-base-pint fla-albumnavigator-pint-style" id="gal_2" style="opacity: 1;"><div class="fla-albumnavigator-main-wrap" style="padding: 5px;"><div class="fla-albumnavigator-item-wrap"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/20210327_070703.jpg" alt="Beach"><div class="fla-albumnavigator-badge-wrap"><svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path></svg></div></div><div class="fla-albumnavigator-desc-wrap" style="color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.65);"><div class="fla-albumnavigator-title-wrap" style="font-size: 28px;"><div class="fla-albumnavigator-title">Beach</div><div class="fla-albumnavigator-count">• 45</div></div><div class="fla-albumnavigator-description" style="border-color: rgb(255, 255, 255);">The best free stock photos by the talented CS.</div></div></div></div></div><div class="splash-column" style="width: 33.3333%;"></div><div class="splash-column" style="width: 33.3333%;"></div></div></div><noscript id="noscript_FlaGallery_sc1_2"><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_070703.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_072627.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_072619.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_072351.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_072339.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_072335.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_072029.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210327_070714.jpg" alt="Beach sunrise at Daytona" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181534.jpg" alt="Space View Park" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181545.jpg" alt="Space View Park" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181545-lowres.jpg" alt="Space View Park" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181525.jpg" alt="Space View Park Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181516.jpg" alt="Space View Park Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181516-lowres.jpg" alt="Space View Park Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181453.jpg" alt="Space View Park Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181448.jpg" alt="Space View Park Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210515_181441.jpg" alt="Space View Park" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210428_091315.jpg" alt="Palm trees" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20201011_171815.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200614_122147.jpg" alt="Open water" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_084807.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_084946.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_084952.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_085015.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_085125.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_085127.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210620_085645.jpg" alt="Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20201011_191411.jpg" alt="The Pier at Daytona Beach 1" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20201011_191416.jpg" alt="The Pier at Daytona Beach 2" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20201011_171723.jpg" alt="View of Daytona from Pier" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20201011_171726.jpg" alt="View of Daytona from Pier" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20201011_171815_0.jpg" alt="View of Daytona from Pier" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210419_163643.jpg" alt="The Pier at Daytona Beach 3" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20210419_163652.jpg" alt="The Sand of Daytona Beach" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200502_172102.jpg" alt="Sandy Beach 1" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200502_172059.jpg" alt="Sandy Beach 2" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200502_172053.jpg" alt="Sandy Beach 3" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200502_170809.jpg" alt="Sandy Beach 4" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200614_121604.jpg" alt="Sandy Beach 5" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20200502_170807.jpg" alt="Sandy Beach 6" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20190814_140918.jpg" alt="Sandy California Beach 1" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20190814_140915.jpg" alt="Sandy California Beach 2" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20160428_134350.jpg" alt="Sandy California Beach 3" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20160428_134343.jpg" alt="Sandy California Beach 4" /><img class="skip-lazy no-lazyload noLazy" data-lazy-src="" src ="https://cs360studio.com/wp-content/flagallery/scenery-1/20160428_134357.jpg" alt="Sandy California Beach 5" /></noscript></div>
+</div><div id="block-17" class="widget widget_block">
+<div style="height:31px" aria-hidden="true" class="wp-block-spacer"></div>
+</div><div id="standard_pro-random-5" class="widget widget-standard_pro-random widget_posts_thumbnail"><h2 class="widget-title">Random Posts</h2><ul><li class="clear"><a href="https://cs360studio.com/2021/11/guy-hammond-gay-christian/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/guy-hammond-gay-christian-d2n9lJ_4HHchqdefault-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Guy Hammond | Gay &amp; Christian ?" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2021/11/guy-hammond-gay-christian-d2n9lJ_4HHchqdefault-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/11/guy-hammond-gay-christian-d2n9lJ_4HHchqdefault-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/11/guy-hammond-gay-christian-d2n9lJ_4HHchqdefault-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="Guy Hammond | Gay &amp; Christian ? 18"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/11/guy-hammond-gay-christian/" rel="bookmark">Guy Hammond | Gay &amp; Christian ?</a><div class="entry-meta">November 16, 2021</div></div></li><li class="clear"><a href="https://cs360studio.com/2021/11/456000-squid-game-in-real-life/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/456000-squid-game-in-real-life-0e3GPea1Tyg-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="$456,000 Squid Game In Real Life!" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/01/456000-squid-game-in-real-life-0e3GPea1Tyg-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/01/456000-squid-game-in-real-life-0e3GPea1Tyg-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2022/01/456000-squid-game-in-real-life-0e3GPea1Tyg-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="$456,000 Squid Game In Real Life! 19"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/11/456000-squid-game-in-real-life/" rel="bookmark">$456,000 Squid Game In Real Life!</a><div class="entry-meta">November 24, 2021</div></div></li><li class="clear"><a href="https://cs360studio.com/2021/09/social-unrest-erupts-as-china-enters-a-liquidity-crisis-the-housing-market-is-finished/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/upts-as-china-enters-a-liquidity-crisis-the-housing-market-is-finished-hZeY24Mbxj0-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="SOCIAL UNREST ERUPTS! As China Enters a Liquidity Crisis | The Housing Market Is Finished" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2021/09/upts-as-china-enters-a-liquidity-crisis-the-housing-market-is-finished-hZeY24Mbxj0-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/09/upts-as-china-enters-a-liquidity-crisis-the-housing-market-is-finished-hZeY24Mbxj0-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/09/upts-as-china-enters-a-liquidity-crisis-the-housing-market-is-finished-hZeY24Mbxj0-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="SOCIAL UNREST ERUPTS! As China Enters a Liquidity Crisis | The Housing Market Is Finished 20"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/09/social-unrest-erupts-as-china-enters-a-liquidity-crisis-the-housing-market-is-finished/" rel="bookmark">SOCIAL UNREST ERUPTS! As China Enters a Liquidity Crisis | The Housing Market Is Finished</a><div class="entry-meta">September 17, 2021</div></div></li><li class="clear"><a href="https://cs360studio.com/2022/03/css-grid-chat-application-example/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646687526_maxresdefault-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="1646687526 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646687526_maxresdefault-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646687526_maxresdefault-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2022/03/1646687526_maxresdefault-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="CSS Grid - Chat Application Example 21"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2022/03/css-grid-chat-application-example/" rel="bookmark">CSS Grid – Chat Application Example</a><div class="entry-meta">March 7, 2022</div></div></li></ul></div></aside><!-- #secondary -->
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer container">
+
+		
+			<div class="footer-columns clear">
+
+				<div class="footer-column footer-column-1">
+					<div id="block-22" class="widget footer-widget widget_block"><a href="https://1.envato.market/c/3258278/805519/4415?subId2=hp_sidebar&amp;subId1=themeforest" target="_top" id="805519"><img loading="lazy" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/4415-805519" border="0" alt="" width="300" height="600"></a><img loading="lazy" height="0" width="0" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/4415" style="position:absolute;visibility:hidden;" border="0"></div>				</div>
+
+				<div class="footer-column footer-column-2">
+					<div id="standard_pro-views-2" class="widget footer-widget widget-standard_pro-views widget_posts_thumbnail"><h3 class="widget-title">Most Viewed Posts</h3><ul><li class="clear"><a href="https://cs360studio.com/2021/04/nucamp-bootcamp-review-2021/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/nucamplogo2-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="nucamplogo2" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2021/04/nucamplogo2-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/04/nucamplogo2-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/04/nucamplogo2-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="Honest Nucamp Full-Stack Bootcamp Review 2021 22"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/04/nucamp-bootcamp-review-2021/" rel="bookmark">Honest Nucamp Full-Stack Bootcamp Review 2021</a><div class="entry-meta">April 25, 2021</div></div></li><li class="clear"><a href="https://cs360studio.com/2021/12/stackr-news-weekly-inspiring-dev-stories-%f0%9f%9a%80-create-10k-nft-collection-without-web3-knowledge-%f0%9f%a4%af/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/9f9a80-create-10k-nft-collection-without-web3-knowledge-f09fa4af-z2vpcQjpqnohqdefault-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="STACKr News Weekly: Inspiring Dev Stories 🚀, Create 10k NFT Collection without Web3 Knowledge! 🤯" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2021/12/9f9a80-create-10k-nft-collection-without-web3-knowledge-f09fa4af-z2vpcQjpqnohqdefault-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/12/9f9a80-create-10k-nft-collection-without-web3-knowledge-f09fa4af-z2vpcQjpqnohqdefault-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/12/9f9a80-create-10k-nft-collection-without-web3-knowledge-f09fa4af-z2vpcQjpqnohqdefault-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="STACKr News Weekly: Inspiring Dev Stories 🚀, Create 10k NFT Collection without Web3 Knowledge! 🤯 23"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/12/stackr-news-weekly-inspiring-dev-stories-%f0%9f%9a%80-create-10k-nft-collection-without-web3-knowledge-%f0%9f%a4%af/" rel="bookmark">STACKr News Weekly: Inspiring Dev Stories 🚀, Create 10k NFT Collection without Web3 Knowledge! 🤯</a><div class="entry-meta">December 14, 2021</div></div></li><li class="clear"><a href="https://cs360studio.com/2021/06/skynet-went-live-june-8-attn-alexa-echo-and-ring-owners/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/skynet-went-live-june-8-attn-alexa-echo-and-ring-owners-ccrUAp4GQvY-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Skynet Went Live June 8! Attn: Alexa Echo and Ring Owners" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2021/06/skynet-went-live-june-8-attn-alexa-echo-and-ring-owners-ccrUAp4GQvY-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/06/skynet-went-live-june-8-attn-alexa-echo-and-ring-owners-ccrUAp4GQvY-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/06/skynet-went-live-june-8-attn-alexa-echo-and-ring-owners-ccrUAp4GQvY-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="Skynet Went Live June 8! Attn: Alexa Echo and Ring Owners 24"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/06/skynet-went-live-june-8-attn-alexa-echo-and-ring-owners/" rel="bookmark">Skynet Went Live June 8! Attn: Alexa Echo and Ring Owners</a><div class="entry-meta">June 10, 2021</div></div></li><li class="clear"><a href="https://cs360studio.com/2021/03/bootcamp-notes-day-7-mon-react-week-3-react-router-and-single-page-applications/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/20190813_150224-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="20190813 150224" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2021/03/20190813_150224-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2021/03/20190813_150224-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2021/03/20190813_150224-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="Bootcamp Notes - Day 7 (Mon) - React: Week 3 - React Router and Single Page Applications 25"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2021/03/bootcamp-notes-day-7-mon-react-week-3-react-router-and-single-page-applications/" rel="bookmark">Bootcamp Notes – Day 7 (Mon) – React: Week 3 – React Router and Single Page Applications</a><div class="entry-meta">March 9, 2021</div></div></li></ul></div>				</div>
+
+				<div class="footer-column footer-column-3">
+					<div id="standard_pro-recent-2" class="widget footer-widget widget-standard_pro-recent widget_posts_thumbnail"><h3 class="widget-title">Recent Posts</h3><ul><li class="clear"><a href="https://cs360studio.com/2022/03/we-built-the-home-of-the-future-with-grant-imahara/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646796193_maxresdefault-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="1646796193 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646796193_maxresdefault-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646796193_maxresdefault-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2022/03/1646796193_maxresdefault-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="We built the Home of the Future with Grant Imahara 26"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2022/03/we-built-the-home-of-the-future-with-grant-imahara/" rel="bookmark">We built the Home of the Future with Grant Imahara</a><div class="entry-meta">March 9, 2022</div></div></li><li class="clear"><a href="https://cs360studio.com/2022/03/dell-business-desktop-computer-pc-core-i5-8gb-ram-128gb-ssd-windows-10-pro-wi-fi/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646795316_s-l1600-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="1646795316 s l1600" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600-768x768.jpg 768w, https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600-80x80.jpg 80w, https://cs360studio.com/wp-content/uploads/2022/03/1646795316_s-l1600.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" title="Dell Business Desktop Computer PC Core i5 8GB RAM 128GB SSD Windows 10 Pro Wi-Fi 27"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2022/03/dell-business-desktop-computer-pc-core-i5-8gb-ram-128gb-ssd-windows-10-pro-wi-fi/" rel="bookmark">Dell Business Desktop Computer PC Core i5 8GB RAM 128GB SSD Windows 10 Pro Wi-Fi</a><div class="entry-meta">March 9, 2022</div></div></li><li class="clear"><a href="https://cs360studio.com/2022/03/meta-glasses-are-the-future-of-computing/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/1646795239_maxresdefault-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="1646795239 maxresdefault" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/1646795239_maxresdefault-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/1646795239_maxresdefault-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2022/03/1646795239_maxresdefault-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="Meta Glasses are the future of computing 28"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2022/03/meta-glasses-are-the-future-of-computing/" rel="bookmark">Meta Glasses are the future of computing</a><div class="entry-meta">March 9, 2022</div></div></li><li class="clear"><a href="https://cs360studio.com/2022/03/fwd-mega-bundle/" rel="bookmark"><div class="thumbnail-wrap"><img width="300" height="300" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/mb-preview-image-300x300.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="mb preview image" loading="lazy" srcset="https://cs360studio.com/wp-content/uploads/2022/03/mb-preview-image-300x300.jpg 300w, https://cs360studio.com/wp-content/uploads/2022/03/mb-preview-image-150x150.jpg 150w, https://cs360studio.com/wp-content/uploads/2022/03/mb-preview-image-80x80.jpg 80w" sizes="(max-width: 300px) 100vw, 300px" title="FWD Mega Bundle 29"></div></a><div class="entry-wrap"><a href="https://cs360studio.com/2022/03/fwd-mega-bundle/" rel="bookmark">FWD Mega Bundle</a><div class="entry-meta">March 9, 2022</div></div></li></ul></div>				</div>
+
+				<div class="footer-column footer-column-4">
+					<div id="happythemes-ad-16" class="widget footer-widget widget_ad ad-widget"><h3 class="widget-title">Traffic Zion</h3><div class="adwidget"><a href="https://307ca542el3scx14s94v0r1teo.hop.clickbank.net/" target="_blank"><img src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/trafficzion.jpg"></a></div></div>				</div>												
+
+			</div><!-- .footer-columns -->
+
+		
+		<div class="clear"></div>
+
+		<div id="site-bottom" class="clear">
+
+			<div class="container">
+
+			<div class="site-info">
+
+				© 2022 | <a href="https://cs360studio.com/">CS360STUDIO.COM</a>
+			</div><!-- .site-info -->
+
+				
+
+			</div><!-- .container -->
+
+		</div>
+		<!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+	<div id="back-top" style="display: block;">
+		<a href="https://cs360studio.com/2021/02/bootcamp-notes-day-10-mon-bootstrap-building-and-deployment-npm-scripts/#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+
+
+
+
+<!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true" data-cli-style="cli-style-v2" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: inherit; bottom: 0px; position: fixed; display: none;"><span><div class="cli-bar-container cli-style-v2"><div class="cli-bar-message">We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept”, you consent to the use of ALL the cookies.</div><div class="cli-bar-btn_container"><a role="button" class="cli_settings_button" style="margin: 0px 10px 0px 5px; color: rgb(51, 51, 51);">Cookie settings</a><a role="button" data-cli_action="accept" id="cookie_action_close_header" class="medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button" style="color: rgb(255, 255, 255); background-color: rgb(97, 162, 41);">ACCEPT</a></div></div></span></div><div id="cookie-law-info-again" data-nosnippet="true" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); position: fixed; font-family: inherit; width: auto; bottom: 0px; right: 100px; display: none;"><span id="cookie_hdr_showagain">Manage consent</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+	<div class="cli-modal-content cli-bar-popup">
+		  <button type="button" class="cli-modal-close" id="cliModalClose">
+			<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+			<span class="wt-cli-sr-only">Close</span>
+		  </button>
+		  <div class="cli-modal-body">
+			<div class="cli-container-fluid cli-tab-container">
+	<div class="cli-row">
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+			<div class="cli-privacy-overview">
+				<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+					<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the ...</div>
+				</div>
+				<a class="cli-privacy-readmore" aria-label="Show more" role="button" data-readmore-text="Show more" data-readless-text="Show less"></a>			</div>
+		</div>
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+												<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+								Necessary							</a>
+															<div class="wt-cli-necessary-checkbox">
+									<input type="checkbox" class="cli-user-preference-checkbox" id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked">
+									<label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+								</div>
+								<span class="cli-necessary-caption">Always Enabled</span>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="necessary">
+								<div class="wt-cli-cookie-description">
+									Necessary cookies are absolutely essential for the website to function properly. This category only includes cookies that ensures basic functionalities and security features of the website. These cookies do not store any personal information.								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="non-necessary" data-toggle="cli-toggle-tab">
+								Non-necessary							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-non-necessary" class="cli-user-preference-checkbox" data-id="checkbox-non-necessary" checked="checked">
+									<label for="wt-cli-checkbox-non-necessary" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Non-necessary</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="non-necessary">
+								<div class="wt-cli-cookie-description">
+									Any cookies that may not be particularly necessary for the website to function and is used specifically to collect user personal data via analytics, ads, other embedded contents are termed as non-necessary cookies. It is mandatory to procure user consent prior to running these cookies on your website.								</div>
+							</div>
+						</div>
+					</div>
+										</div>
+	</div>
+</div>
+		  </div>
+		  <div class="cli-modal-footer">
+			<div class="wt-cli-element cli-container-fluid cli-tab-container">
+				<div class="cli-row">
+					<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+						<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+						
+															<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">SAVE &amp; ACCEPT</a>
+													</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><script type="text/javascript">
+        jQuery(function(){
+        var arrLiveStats=[];
+        var WSM_PREFIX="wsm";
+		
+        jQuery(".if-js-closed").removeClass("if-js-closed").addClass("closed");
+                var wsmFnSiteLiveStats=function(){
+                           jQuery.ajax({
+                               type: "POST",
+                               url: wsm_ajaxObject.ajax_url,
+                               data: { action: 'liveSiteStats', requests: JSON.stringify(arrLiveStats), r: Math.random() }
+                           }).done(function( strResponse ) {
+                                if(strResponse!="No"){
+                                    arrResponse=JSON.parse(strResponse);
+                                    jQuery.each(arrResponse, function(key,value){
+                                    
+                                        $element= document.getElementById(key);
+                                        oldValue=parseInt($element.getAttribute("data-value").replace(/,/g, ""));
+                                        diff=parseInt(value.replace(/,/g, ""))-oldValue;
+                                        $class="";
+                                        
+                                        if(diff>=0){
+                                            diff="+"+diff;
+                                        }else{
+                                            $class="wmcRedBack";
+                                        }
+
+                                        $element.setAttribute("data-value",value);
+                                        $element.innerHTML=diff;
+                                        jQuery("#"+key).addClass($class).show().siblings(".wsmH2Number").text(value);
+                                        
+                                        if(key=="SiteUserOnline")
+                                        {
+                                            var onlineUserCnt = arrResponse.wsmSiteUserOnline;
+                                            if(jQuery("#wsmSiteUserOnline").length)
+                                            {
+                                                jQuery("#wsmSiteUserOnline").attr("data-value",onlineUserCnt);   jQuery("#wsmSiteUserOnline").next(".wsmH2Number").html("<a target=\"_blank\" href=\"?page=wsm_traffic&subPage=UsersOnline&subTab=summary\">"+onlineUserCnt+"</a>");
+                                            }
+                                        }
+                                    });
+                                    setTimeout(function() {
+                                        jQuery.each(arrResponse, function(key,value){
+                                            jQuery("#"+key).removeClass("wmcRedBack").hide();
+                                        });
+                                    }, 1500);
+                                }
+                           });
+                       }
+                       if(arrLiveStats.length>0){
+                          setInterval(wsmFnSiteLiveStats, 10000);
+                       }});
+        </script><link rel="stylesheet" id="ccpw-styles-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/ccpw-styles.css" type="text/css" media="all">
+<style id="ccpw-styles-inline-css" type="text/css">
+
+            #ccpw-list-widget-7452.ccpw-widget .ccpw_table tr{background-color:#ffffff;color:#1e73be;}
+            #ccpw-list-widget-7452.ccpw-widget .ccpw_table tr th, #ccpw-list-widget-7452.ccpw-widget .ccpw_table tr td,
+            #ccpw-list-widget-7452.ccpw-widget .ccpw_table tr td a{color:#1e73be;}
+</style>
+<link rel="stylesheet" id="ccpw-bootstrap-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ccpw-custom-icons-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/ccpw-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-subscribe-css" href="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/wp-subscribe-form.css" type="text/css" media="all">
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/superfish.js.download" id="superfish-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/jquery.slicknav.min.js.download" id="slicknav-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/jquery.sticky.js.download" id="sticky-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/modernizr.min.js.download" id="modernizr-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/html5.js.download" id="html5-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/jquery.bxslider.min.js.download" id="bxslider-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/jquery.custom.js.download" id="custom-js"></script>
+<script type="text/javascript" id="flagscript-js-extra">
+/* <![CDATA[ */
+var FlaGallery = {"ajaxurl":"https:\/\/cs360studio.com\/wp-admin\/admin-ajax.php","nonce":"f66fcfacad","license":"9af21ebc90df7ded485973becc21233e","pack":"GRANDPackPlus"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/script.js.download" id="flagscript-js"></script>
+<script type="text/javascript" id="wp-subscribe-js-extra">
+/* <![CDATA[ */
+var wp_subscribe = {"ajaxurl":"https:\/\/cs360studio.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/wp-subscribe-form.js.download" id="wp-subscribe-js"></script>
+<script type="text/javascript" src="./Bootcamp Notes - Day 11 (Tues) - Bootstrap_ Building And Deployment_ NPM Scripts_files/albumnavigator.js.download" id="flagallery-albumnavigator-skin-js"></script>
+
+
+
+</body></html>
